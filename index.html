@@ -6,108 +6,49 @@
     <title>womp</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="cont">
+<div class="cont">
+    <div class="main-cont">
+        <div class="bannerBox">
+            <img src="logo.svg" class="logo" />
+            <br>
+            <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tag">can be trusted with nuclear weaponry (probably)</span>
+        </div>
         <div class="main-cont">
             <div class="bannerBox">
-                <img src="logo.svg" class="logo" /><br>
-                can be trusted with nuclear weaponry (probably)
-            </div>
-            <div class="main-cont">
-                <div class="bannerBox">
-                    <a title="Please take me home. I want to go home. I don't know where I am. I want to go home." href="#" onclick="ockl()" id="st" class="selectedPage">home</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="/projects/">projects</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://wetdry.world/@nz">mastodon</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="https://twitter.com/psychosispup">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="https://soundcloud.com/w0m_p">soundcloud</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="https://github.com/wompscode">github</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="https://vrchat.com/home/user/usr_9e9428fe-f206-4c1d-967b-a6a87e746154">vrchat</a><br/>
-                </div>
-            </div>
-            <div class="main-cont">
-                <div class="bannerBox">
-                    i'm <a href="https://pronouns.womp.gay">phoebe faith</a>. i make stupid shit, listen to music (i love to <a href="https://discogs.womp.gay">collect records</a>!), drink too much caffeine, and sleep not nearly enough. not the greatest programmer ever, but i do enjoy the hobby.<br /><br />
-                    i listen to a lot of: <span class="flatList-cont">
-                        <span class="flatList-content">underscores</span>.
-                        <span class="flatList-content">Porter Robinson</span>, 
-                        <span class="flatList-content">Jane Remover</span>, 
-                        <span class="flatList-content">100 gecs</span>.
-                    </span><br />
-                    i am currently playing: <span class="flatList-cont">
-                        <span class="flatList-content">Baldur's Gate 3</span>, 
-                        <span class="flatList-content">FFXIV (Materia, Sophia)</span>,
-                        <span class="flatList-content">VRChat</span>,
-                        <span class="flatList-content">Portal</span>. 
-                    </span>
-                </div>
-            </div>
-            <div class="main-cont">
-                <div class="bannerBox">
-                    this website is best experienced on a laptop/desktop. sorry phone users!! i hate doing responsive design (<span style="font-weight: bold;">seriously</span>, it fucking sucks.).
-                </div>
-            </div>
-            <div class="main-cont">
-                <div class="bannerBox">
-                    welcome 2 to the <a href="https://payhip.com/kitskennel">kit</a> section:<br>
-                    peeb likes it when i put my cold toesies on her legs in bed (<span style="color:red;">editors note: </span> fact checked and this is false) and also when i bite her and be like omononmnonmon slob on that knob. she also smells good snifffsnifnsfnsfnsifnsnurf
-                </div>
+                <a class="selectedPage">home</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/projects/">projects</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://wetdry.world/@nz">mastodon</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://twitter.com/psychosispup">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://soundcloud.com/w0m_p">soundcloud</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://github.com/wompscode">github</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://vrchat.com/home/user/usr_9e9428fe-f206-4c1d-967b-a6a87e746154">vrchat</a>
+                <br />
             </div>
         </div>
-        <script>
-            // This has no functional meaning, it's just fun to make.
-            // Although, this could eventually change - I do like adding cryptic shit to what I make.
-            (function() {
-                g = ["aGVsbA==","cGFpbg==","cnVu","ZXNjYXBl", "ZW1wdHk=", "c2lsZW5jZQ==", "sevmua==", "ZnJlZWRvbQ==", "bG92ZQ==", "dHJ5aW5n", "Y29sZA==", "ZGVhdGg=", "ZWF0", "ZW5ndWxm", "c3dhbGxvdw==", "ZGlnZXN0"];
-                
-                gk = 0
-                while(gk<15) {
-                    f = atob(g[Math.floor(Math.random() * g.length)])
-                f = f.split('');
-                    f[Math.floor(Math.random()*f.length)] = f[Math.floor(Math.random()*f.length)];
-                    document.querySelector("#st").title = document.querySelector("#st").title + f.join('');
-                    gk=gk+1;
-                }
-            })();
+        <div class="main-cont">
+            <div class="bannerBox"> i'm <a href="https://pronouns.womp.gay">phoebe faith</a>. i love programming. <br />
+                <br /> i listen to lots of <span class="flatList-cont">
+              <span class="flatList-content">Porter Robinson</span>, <span class="flatList-content">Kinoteki</span> (listen to The Visitor, it is fantastic.), <span class="flatList-content">underscores</span>, and periodically <span class="flatList-content">Ghost Mountain</span>. </span>
+                <br />
+                <br /> i play heaps of <span class="flatList-cont">
+              <span id="ffxiv" onmouseenter="ffxiv_onme()" onmouseleave="ffxiv_onml()" class="flatList-content">Final Fantasy XIV (Materia DC, Sophia)</span>, <span class="flatList-content">Balatro</span>, and sometimes <span class="flatList-content">ULTRAKILL</span>. </span>
+            </div>
+        </div>
+        <div class="main-cont">
+            <div class="bannerBox"> this website is best experienced on a laptop/desktop, sorry to the 6 of you who visit from a phone - i just really hate handling a wide variety of screen sizes. hellish experience. </div>
+        </div>
+        <div class="main-cont">
+            <div class="bannerBox"> welcome 2 to the <a href="https://payhip.com/kitskennel">kit</a> section: <br> peeb likes it when i put my cold toesies on her legs in bed (<span style="color:red;">editors note: </span> fact checked and this is false) and also when i bite her and be like omononmnonmon slob on that knob. she also smells good snifffsnifnsfnsfnsifnsnurf </div>
+        </div>
+    </div>
+</div>
+<script>
+    function ffxiv_onme() {
+        document.querySelector("#ffxiv").innerHTML = "Have you heard of the critically acclaimed MMORPG Final Fantasy XIV with an expanded free trial which you can play through the entirety of A Realm Reborn and the award winning Heavensward expansion and also award winning Stormblood expansion up to level 70 for FREE with no restrictions on playtime? Sign up, and enjoy Eorzea today!  <a href='https://secure.square-enix.com/account/app/svc/ffxivregister'> https: //secure.square-enix.com/account/app/svc/ffxivregister</a>";
+    }
 
-            function ockl() {
-                // Slow Dance
-                i = 0;
-                z = "";
-                g = ["aGVsbA==","cGFpbg==","cnVu","ZXNjYXBl", "ZW1wdHk=", "c2lsZW5jZQ==", "sevmua==", "ZnJlZWRvbQ==", "bG92ZQ==", "dHJ5aW5n", "Y29sZA==", "ZGVhdGg=", "ZWF0", "ZW5ndWxm", "c3dhbGxvdw==", "ZGlnZXN0"];
-                y = ["z", "y", "y", "H", "H"];
-                x = ["MI5JIGxvdmUgeW91L", "cVByaW5nLCB3aG8gd2lsbCBhbnN3ZXI/PC9o", "ZV48L3RpdGxlPjxoMz5XaGVuIHRoZSBiZWxs", "PMRpdGxlPlRoZSBiZWxscyBhcmUgY2FsbGlu", "PMN0eWxlPip7bWFyZ2luOjA7fTwvc3R5bGU+"]
-                while (i<5) {
-                    let d = x[i].split('');
-                    d[1] = y[i];
-                    z = d.join('') + z;
-                    i = i + 1;
-                    a = x[Math.floor(Math.random()*x.length)];
-                    a = a.split('');
-                    m = 0;
-                    d = Math.floor(Math.random() * 60);
-                    while (m < d) {
-                        console.log(m);
-                        console.log(d);
-                        td = document.body.innerHTML.split('');
-                        gm = 0
-                        while(gm<10) {
-                            td[Math.floor(Math.random()*a.length)] = td[Math.floor(Math.random()*a.length)];
-                            gm = gm + 1;
-                        }
-                        document.body.innerHTML = td.join('');
-                        y = Math.floor(Math.random() * 10);
-                        if(y == 5) {
-                            f = atob(g[Math.floor(Math.random() * g.length)])
-                            f = f.split('');
-                            f[Math.floor(Math.random()*f.length)] = f[Math.floor(Math.random()*f.length)];
-                            document.write(f.join(''));
-                        }
-                        gh = 0
-                        while(gh<10) {
-                            a[Math.floor(Math.random()*a.length)] = a[Math.floor(Math.random()*a.length)];
-                            gh = gh + 1
-                        }
-                        m = m + 1;
-                    }
-                    try{document.write(atob(a.join('')));}catch{}
-                    try{document.write(atob(z+"g=="))}catch{}
-                }
-            }
-        </script>
+    function ffxiv_onml() {
+        document.querySelector("#ffxiv").innerText = "Final Fantasy XIV (Materia DC, Sophia)";
+    }
+    const tag = document.querySelector('#tag');
+    const possible_taglines = ["can be trusted with nuclear weaponry (probably)", "will preach final fantasy xiv to you", "5 years in a row as CIA's \"Best Gangstalker\"", "Remove objects from space", "I'm literally a fool, what's your excuse?"];
+    tag.innerText = possible_taglines[Math.floor(Math.random() * possible_taglines.length)];
+    tag.addEventListener('click', () => tag.innerText = possible_taglines[Math.floor(Math.random() * possible_taglines.length)]);
+</script>
 </body>
 </html>
