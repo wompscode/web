@@ -19,14 +19,14 @@ I'm not that great at web design. This is my own personal page, and I have fun w
         </div>
         <div class="main-cont">
             <div class="bannerBox">
-                <a class="selectedPage">home</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/projects/">projects</a>&nbsp;&nbsp;-&nbsp;&nbsp; <a href="https://wetdry.world/@nz">mastodon</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://twitter.com/psychosispup">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://soundcloud.com/w0m_p">soundcloud</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://github.com/wompscode">github</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://vrchat.com/home/user/usr_9e9428fe-f206-4c1d-967b-a6a87e746154">vrchat</a>
+                <a class="selectedPage">home</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/projects/">projects</a>&nbsp;&nbsp;-&nbsp;&nbsp; <a href="https://bluesky.womp.gay">bluesky</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://twitter.com/psychosispup">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://soundcloud.com/w0m_p">soundcloud</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://github.com/wompscode">github</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://vrchat.com/home/user/usr_9e9428fe-f206-4c1d-967b-a6a87e746154">vrchat</a>
                 <br />
             </div>
         </div>
         <div class="main-cont">
             <div class="bannerBox"> i'm <a href="https://pronouns.womp.gay">phoebe faith</a>! i make things that i want and put them online so other people who want the same thing can have the thing i make. i study games.<br />
                 <br /> i listen to lots of <span class="flatList-cont">
-              <span class="flatList-content">Porter Robinson</span>, <span class="flatList-content">Kinoteki</span>, <span class="flatList-content">underscores</span>, and <span class="flatList-content">Jane Remover</span>. </span>
+              <span class="flatList-content">Porter Robinson</span>, <span class="flatList-content">Kinoteki</span>, <span class="flatList-content">underscores</span>, and <span class="flatList-content">Jane Remover</span>. take a look at my <a href="https://www.last.fm/user/wxmpirl">last.fm</a> for a more comprehensive idea of what i listen to.</span>
                 <br /> i mostly <span class="flatList-cont">
               <span id="ffxiv" onmouseenter="ffxiv_onme()" onmouseleave="ffxiv_onml()" class="flatList-content">Final Fantasy XIV (Materia DC, Sophia)</span>, <span class="flatList-content">Balatro</span>, and sometimes <span class="flatList-content">ULTRAKILL</span>.<br /><br />you can reach me via <a href="mailto:phoebe@womp.gay">phoebe@womp.gay</a>, and i'll probably get back to you.</span>
             </div>
@@ -36,18 +36,6 @@ I'm not that great at web design. This is my own personal page, and I have fun w
         </div>
     </div>
 </div>
-<script>
-    function ffxiv_onme() {
-        document.querySelector("#ffxiv").innerHTML = "Have you heard of the critically acclaimed MMORPG Final Fantasy XIV with an expanded free trial which you can play through the entirety of A Realm Reborn and the award winning Heavensward expansion and also award winning Stormblood expansion up to level 70 for FREE with no restrictions on playtime? Sign up, and enjoy Eorzea today!  <a href='https://secure.square-enix.com/account/app/svc/ffxivregister'> https: //secure.square-enix.com/account/app/svc/ffxivregister</a>";
-    }
-
-    function ffxiv_onml() {
-        document.querySelector("#ffxiv").innerText = "Final Fantasy XIV (Materia DC, Sophia)";
-    }
-    const tag = document.querySelector('#tag');
-    const possible_taglines = ["can be trusted with nuclear weaponry (probably)", "will preach final fantasy xiv to you", "5 years in a row as CIA's \"Best Gangstalker\"", "Remove objects from space", "I'm literally a fool, what's your excuse?"];
-    tag.innerText = possible_taglines[Math.floor(Math.random() * possible_taglines.length)];
-    tag.addEventListener('click', () => tag.innerText = possible_taglines[Math.floor(Math.random() * possible_taglines.length)]);
-</script>
+<script src="main.js"></script>
 </body>
 </html>
