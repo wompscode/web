@@ -25,54 +25,105 @@
         </div>
         <div class="main-cont">
             <div class="bannerBox">
-                <h1>main projects</h1>
-                <span>
-              <span class="project_title">WTFIsTheBatteryAt</span><br /> I don't like PlayStation Accessories, and really just needed a way to get my battery percentage shown. It expanded into a little more and now is in its current form. <br /> It has a notification tray percentage display, battery percentage notifications and LED colour setting. It works wired and wirelessly, although you're probably not going to find so much use wired. <br />
-              <a href="https://github.com/wompscode/WTFIsTheBatteryAt/releases/latest">Latest Release</a> / <a href="https://github.com/wompscode/WTFIsTheBatteryAt">Source Code</a>
-            </span><br /><br />
-                <span>
-                <span class="project_title">pebs</span><br />
-              Phoebe's Extensible Backup Script exists because I wanted an easy to extend backup solution that only required a bash-compliant shell setup. <br />
-              <a href="https://github.com/wompscode/pebs">Source Code</a>
-            </span><br /><br />
-                <span>
-              <span class="project_title">phdt</span><br /> Phoebe's Disk Tester is a tool I made that (hypothetically) should be able to help you diagnose whether or not the storage you have is actually the capacity it says it is. It is not dissimilar to <a href="https://h2testw.org/">h2testw</a>. <br />
-              <a href="https://github.com/wompscode/phdt">Source Code</a>
-            </span><br /><br />
-                <span>
-              <span class="project_title">palc</span><br /> Phoebe's Automated Library Converter is a tool I made that recursively goes through a specified directory looking for audio files to re-encode with your chosen codec. Uses FFMpegCore (which is an ffmpeg wrapper for C#) for re-encoding and ATL for .NET for metadata cloning.<br />
-              <a href="https://github.com/wompscode/palc/releases/latest">Latest Release</a> / <a href="https://github.com/wompscode/palc">Source Code</a>
-            </span><br /><br />
-                <span>
-              <span class="project_title">discpywalNET</span><br />
+                <h1 id="main_projects">main projects</h1>
+
+                <div class="sub_bannerBox">
+                  <span id ="wtfisthebatteryat" class="project_title">
+                    <a href="#wtfisthebatteryat">#</a> WTFIsTheBatteryAt
+                    </span><br />
+                    I don't like PlayStation Accessories, and needed a way to get my battery percentage shown. It's since expanded into a bit more, and I'm currently working on a 2.0 release, with plugin support.<br /> It's got a notification tray battery percentage display along, notifications for low percentage, and LED colour settings. <br />
+                    <a href="https://github.com/wompscode/WTFIsTheBatteryAt/releases/latest">Latest Release</a> / <a href="https://github.com/wompscode/WTFIsTheBatteryAt">Source Code</a>
+                  </div>
+                
+                <br />
+
+                <div class="sub_bannerBox">
+                  <span id="pebs" class="project_title">
+                    <a href="#pebs">#</a> pebs
+                    </span><br />
+                    Phoebe's Extensible Backup Script exists because I wanted an easy to extend backup solution that only required a bash-compliant shell setup. <br />
+                    <a href="https://github.com/wompscode/pebs">Source Code</a>
+                  </div>
+    
+                <br />
+                
+                <div class="sub_bannerBox">
+                  <span id="phdt" class="project_title">
+                    <a href="#phdt">#</a> phdt
+                    </span><br />
+                    Phoebe's Disk Tester is a tool I made that (hypothetically) should be able to help you diagnose whether or not the storage you have is actually the capacity it says it is. It is not dissimilar to <a href="https://h2testw.org/">h2testw</a>. <br />
+                    <a href="https://github.com/wompscode/phdt">Source Code</a>
+                  </div>
+    
+                <br />
+                
+                <div class="sub_bannerBox">
+                  <span id="palc" class="project_title">
+                    <a href="#palc">#</a> palc
+                    </span><br />
+                    Phoebe's Automated Library Converter is a tool I made that recursively goes through a specified directory looking for audio files to re-encode with your chosen codec. Uses FFMpegCore (which is an ffmpeg wrapper for C#) for re-encoding and ATL for .NET for metadata cloning.<br />
+                    <a href="https://github.com/wompscode/palc/releases/latest">Latest Release</a> / <a href="https://github.com/wompscode/palc">Source Code</a>
+                  </div>
+
+                <br />
+    
+                <div class="sub_bannerBox">
+                  <span id="discpywalnet" class="project_title">
+                    <a href="#discpywalnet">#</a> discpywalNET
+                    </span><br />
                     discpywalNET is a Discord.NET bot that looks for when users change their profile picture, and changes a role colour associated with the user to be the dominant colour from the new picture. discpywalNET is the successor to discpywal, written in C# because .NET Core is pretty cool. It is named after dylanaraps' project <a href="https://github.com/dylanaraps/pywal">pywal</a>. <br />
-              <a href="https://github.com/wompscode/discpywalNET">Source Code</a>
-            </span><br /><br />
-                <span>
-              <span class="project_title">TimCSweeney</span> <br />TimCSweeney is a Discord.NET bot that looks for messages and pictures that contain certain keywords and reacts to them with associated emojis. It was created initially as a Discord.js bot as a joke for a friend group Discord server, but later was rewritten in C# using Discord.NET because .NET Core <i>is</i> pretty cool. <br />
-              <a href="https://github.com/wompscode/TimCSweeney">Source Code</a>
-            </span><br /><br />
-                <span>
-              <span class="project_title">FFXIV Plugins</span><br /> I make plugins that fix or add things I want into Final Fantasy XIV using the Dalamud plugin-loader. <br />
-              <a href="https://github.com/wompscode/afkmute">AFKMute</a> / <a href="https://github.com/wompscode/nowplaying">NowPlaying</a>
-            </span><br />
+                    <a href="https://github.com/wompscode/discpywalNET">Source Code</a>
+                  </div>
+
+                <br />
+                
+                <div class="sub_bannerBox">
+                  <span id="timcsweeney" class="project_title">
+                    <a href="#timcsweeney">#</a> TimCSweeney
+                    </span><br />
+                    TimCSweeney is a Discord.NET bot that looks for messages and pictures that contain certain keywords and reacts to them with associated emojis. It was created initially as a Discord.js bot as a joke for a friend group Discord server, but later was rewritten in C# using Discord.NET because .NET Core <i>is</i> pretty cool. <br />
+                    <a href="https://github.com/wompscode/TimCSweeney">Source Code</a>
+                  </div>
+
+                <br />
+    
+                <div class="sub_bannerBox">
+                  <span id="ffxiv" class="project_title">
+                    <a href="#ffxiv">#</a> FFXIV Plugins
+                    </span><br />
+                    I make plugins that fix or add things I want into Final Fantasy XIV using the Dalamud plugin-loader. <br />
+                    <a href="https://github.com/wompscode/afkmute">AFKMute</a> / <a href="https://github.com/wompscode/nowplaying">NowPlaying</a>
+                  </div>
             </div>
-        </div>
+
+
         </div>
         <div class="main-cont">
-            <div class="bannerBox">
-                <h1>old projects</h1>
-                <span>
-              <span class="project_title">i386chat</span><br /> i386chat was a web-based chat application written using node.JS and socket.IO. Multiple iterations existed, and a lot of fun was had in the work we put in altogether as a group. <br />
-              <a href="https://github.com/i386chat">GitHub Organization</a>
-            </span><br /><br />
-                <span>
-              <span class="project_title">discpywal</span><br /> discpywal is a Discord.js bot that looks for when users change their profile picture, and changes a role colour associated with the user to be the average colour from the new picture. It is named after dylanaraps' project <a href="https://github.com/dylanaraps/pywal">pywal</a>. <br />
-              <a href="https://github.com/wompscode/discpywal">Source Code</a>
-            </span><br />
-            </div>
+          <div class="bannerBox">
+            <h1 id="old_projects">old projects</h1>
+
+            <div class="sub_bannerBox">
+              <span id="i386chat" class="project_title">
+                <a href="#i386chat">#</a> i386chat
+                </span><br />
+                i386chat was a web-based chat application written using node.JS and socket.IO. Multiple iterations existed, and a lot of fun was had in the work we put in altogether as a group. <br />
+                <a href="https://github.com/i386chat">GitHub Organization</a>
+              </div>
+
+            <br />
+
+            <div class="sub_bannerBox">
+              <span id="discpywal" class="project_title">
+                <a href="#discpywal">#</a> discpywal
+                </span><br />
+                discpywal is a Discord.js bot that looks for when users change their profile picture, and changes a role colour associated with the user to be the average colour from the new picture. It is named after dylanaraps' project <a href="https://github.com/dylanaraps/pywal">pywal</a>. <br />
+                <a href="https://github.com/wompscode/discpywal">Source Code</a>
+              </div>
+          </div>
+
         </div>
-    </div>
+      </div>
+  </div>
 <script src="../main.js"></script>
 </body>
 </html>

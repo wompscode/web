@@ -6,12 +6,15 @@
 
 
 :root {
-    --banner-background: #141116;
-    --background: #151218;
-    --banner-hover: #1a171d;
+    --background: rgb(6, 6, 6);
+    --banner-background: rgb(10, 10, 10);
+    --banner-hover: rgb(14, 14, 14);
+    --sub_banner-background: rgb(12, 12, 12);
+    --sub_banner-hover: rgb(11, 11, 11);
     --text-color: #c6b0df;
     --a-color: #ab97c2;
 }
+
 html, body {
     background-color: var(--background);
     color: var(--text-color);
@@ -47,9 +50,30 @@ a:hover {
     padding:8px;
     width:850px;
     min-width:fit-content;
-    border-radius:8px;
+    border-radius:12px;
     background-color: var(--banner-background);
     transition: .2s ease-in-out;
+}
+
+.bannerBox .sub_bannerBox {
+    padding: 10px;
+    background-color: var(--sub_banner-background);
+    border-radius:9px;
+    transition: .2s ease-in-out;
+
+}
+
+.bannerBox .sub_bannerBox a {
+    color: var(--a-color);
+    font-size:14px;
+    background-color: var(--sub_banner-background);
+    transition: .2s ease-in-out;
+}
+
+.bannerBox .sub_bannerBox a:hover {
+    background-color: var(--a-color);
+    color: var(--sub_banner-background);
+    font-size: 16px;
 }
 
 @media only screen and (max-width: 375px){
@@ -77,10 +101,41 @@ a:hover {
 }
 
 .bannerBox:hover {
-    border-radius:10px;
+    border-radius:14px;
     background-color: var(--banner-hover);
 }
 
+.bannerBox:hover a {
+    color: var(--a-color);
+    font-size:14px;
+    background-color: var(--banner-hover);
+    transition: .2s ease-in-out;
+}
+
+.bannerBox:hover a:hover {
+    background-color: var(--a-color);
+    color: var(--banner-hover);
+    font-size: 16px;
+}
+
+.bannerBox:hover .sub_bannerBox {
+    padding: 10px;
+    background-color: var(--sub_banner-hover);
+    border-radius:12px;
+}
+
+.bannerBox:hover .sub_bannerBox a {
+    color: var(--a-color);
+    font-size:14px;
+    background-color: var(--sub_banner-hover);
+    transition: .2s ease-in-out;
+}
+
+.bannerBox:hover .sub_bannerBox a:hover {
+    background-color: var(--a-color);
+    color: var(--sub_banner-hover);
+    font-size: 16px;
+}
 .flex {
     display: flex;
     max-width:850px;
