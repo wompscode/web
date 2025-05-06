@@ -2,8 +2,15 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="psbg_pageTitle">psbg: Retrospective</title>
+    <title id="psbg_pageTitle">psbg: A Retrospective</title>
     <link rel="stylesheet" href="https://womp.gay/style.css">
+    <style>
+        img {
+            width: 768px;
+            height:auto;
+        }
+        
+    </style>
 </head>
 <body>
 <div class="cont">
@@ -22,7 +29,7 @@
         <div class="main-cont">
             <div class="bannerBox">
                 <a href="posts.html" id="psbg_goBack">&lt;--</a>
-                <h1 id="psbg_articleTitle">psbg: Retrospective</h1> 
+                <h1 id="psbg_articleTitle">psbg: A Retrospective</h1> 
                 <span id="psbg_articleDate">3/5/2025</span> - <span id="psbg_articleAuthor">phoebe</span>
             </div>
         </div>
@@ -83,6 +90,9 @@ Oh well!</p>
 <p>Actually - the &quot;at this point&quot; is now, the current time of writing. I'm writing this not only as a test of psbg, but as a way to just talk about the process of making it - which if you remember the start of this post, is the exact reason I wanted to start blogging in the first place: I want to talk about the things I make.</p>
 <p>There's a lot of changes I'd still like to make, and a lot of cleanup to do. I've got a great deal of spare time for a little, and I'll probably make use of that to finish psbg fully.</p>
 <p>To finish up: psbg is a static site generator intended for blogging. I had a lot of fun writing it, I intend to continue working on it, and I also really dislike Aspose.</p>
+<p><strong>6/5/25</strong>: psbg has been prettified a little bit, much like my other tools! logs are coloured, and contain information about what's happening at the time - such as errors if your template is missing pieces that would make an article unreadable. <img src="psbg_img1.png" alt="picture of psbg in action"><br>
+also now copies other files outside of just converting <code>.md</code>, as long as they're listed within the approved extensions in your config - this means including photos, like seen above is easier now. you'll probably still need to make adjustments to your template to fit them in: for mine, i had to limit image width to 768px (looked fine across most screen sizes) and set image height to auto. realistically, this shouldn't be an issue for most though.</p>
+<p>psbg is for the most part complete in what i want it for - i will eventually setup github actions to release builds whenever i publish changes, but until then - you need to compile it yourself.</p>
 <p> <br>
  <br>
 I'd like to write a lot more about the things I make: the little tools, Discord bots, and my larger university projects. I'm not great at writing, and I'd like to change that.<br>
