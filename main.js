@@ -1,6 +1,6 @@
 ﻿// for index.html and vrchat.html
 function ffxiv_onme() {
-    document.querySelector("#ffxiv").innerHTML = "Have you heard of the critically acclaimed MMORPG Final Fantasy XIV with an expanded free trial which you can play through the entirety of A Realm Reborn and the award winning Heavensward expansion and also award winning Stormblood expansion up to level 70 for FREE with no restrictions on playtime? Sign up, and enjoy Eorzea today!  <a href='https://secure.square-enix.com/account/app/svc/ffxivregister'> https: //secure.square-enix.com/account/app/svc/ffxivregister</a>";
+    document.querySelector("#ffxiv").innerHTML = "Have you heard of the critically acclaimed MMORPG Final Fantasy XIV with an expanded free trial which you can play through the entirety of A Realm Reborn and the award winning Heavensward expansion and also award winning Stormblood expansion up to level 70 for FREE with no restrictions on playtime? Sign up, and enjoy Eorzea today!  <a href='https://secure.square-enix.com/account/app/svc/ffxivregister'>https://secure.square-enix.com/account/app/svc/ffxivregister</a>";
 }
 
 function ffxiv_onml() {

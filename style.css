@@ -10,7 +10,8 @@
     --banner-background: rgb(10, 10, 10);
     --banner-hover: rgb(14, 14, 14);
     --sub_banner-background: rgb(12, 12, 12);
-    --sub_banner-hover: rgb(11, 11, 11);
+    /*--sub_banner-hover: rgb(11, 11, 11);*/
+    --sub_banner-hover: #1e1a22;
     --text-color: #c6b0df;
     --a-color: #ab97c2;
 }
@@ -24,6 +25,7 @@ html, body {
 }
 
 a {
+    display:inline-block;
     color: var(--a-color);
     font-size:14px;
     background-color: var(--banner-background);
@@ -33,7 +35,8 @@ a {
 a:hover {
     background-color: var(--a-color);
     color: var(--banner-background);
-    font-size: 16px;
+/*    font-size: 16px;*/
+    transform:scale(1.05);
 }
 
 .selectedPage {
@@ -60,7 +63,6 @@ a:hover {
     background-color: var(--sub_banner-background);
     border-radius:9px;
     transition: .2s ease-in-out;
-
 }
 
 .bannerBox .sub_bannerBox a {
@@ -73,7 +75,8 @@ a:hover {
 .bannerBox .sub_bannerBox a:hover {
     background-color: var(--a-color);
     color: var(--sub_banner-background);
-    font-size: 16px;
+/*    font-size: 16px;*/
+    transform:scale(1.05);
 }
 
 @media only screen and (max-width: 375px){
@@ -115,26 +118,32 @@ a:hover {
 .bannerBox:hover a:hover {
     background-color: var(--a-color);
     color: var(--banner-hover);
-    font-size: 16px;
+/*    font-size: 16px;*/
+    transform:scale(1.05);
+}
+
+.bannerBox .sub_bannerBox:hover {
+    padding: 10px;
+    background-color: var(--sub_banner-hover);
+    transform:scale(1.0175);
 }
 
 .bannerBox:hover .sub_bannerBox {
-    padding: 10px;
-    background-color: var(--sub_banner-hover);
     border-radius:12px;
 }
 
-.bannerBox:hover .sub_bannerBox a {
+.bannerBox .sub_bannerBox:hover a {
     color: var(--a-color);
     font-size:14px;
     background-color: var(--sub_banner-hover);
     transition: .2s ease-in-out;
 }
 
-.bannerBox:hover .sub_bannerBox a:hover {
+.bannerBox .sub_bannerBox:hover a:hover {
     background-color: var(--a-color);
     color: var(--sub_banner-hover);
-    font-size: 16px;
+/*    font-size: 16px;*/
+    transform:scale(1.05);
 }
 .flex {
     display: flex;
@@ -144,6 +153,13 @@ a:hover {
 .logo {
     width:auto;
     height:86px;
+    transition: .6s ease-in, .2s ease-out;
+    display:inline-block;
+}
+
+.logo:hover {
+    transform:scale(1.05);
+    transform:rotate(1.6deg)
 }
 
 .container-padded {
