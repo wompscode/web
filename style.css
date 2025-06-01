@@ -182,3 +182,16 @@ h1 {
     font-size: 20px;
     font-weight: bold;
 }
+
+.my_name {
+    transition: transform .2s ease-in-out !important;
+}
+.my_name:hover {
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3) !important;
+    color: #ab97c230 !important;
+    -webkit-background-clip: text !important;
+    transform:matrix(1.05, 0.015, 0.015, 1.05, 0, 0) !important;
+    transition: transform .2s ease-in-out !important;
+
+
+}
