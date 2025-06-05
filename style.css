@@ -182,6 +182,7 @@ h1 {
 
 .my_name {
     transition: transform .2s ease-in-out !important;
+    -webkit-background-clip: text !important;
 }
 
 .my_name:hover {
