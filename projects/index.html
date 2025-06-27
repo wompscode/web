@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="https://womp.gay/style.css">
 </head>
 <body>
+<span id="explosion"></span>
 <div class="cont">
     <div class="main-cont">
         <div class="bannerBox">
-            <img alt="stylised logo that says womp with a star after it" src="https://womp.gay/logo.svg" class="logo" />
-            <br>
-            <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tag">can be trusted with nuclear weaponry (probably)</span>
+            <div class="logoContainer">
+                <img alt="stylised logo that says womp with a star after it" src="/logo.svg" id="logo" class="logo" />
+            </div>
+            <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tagline">can be trusted with nuclear weaponry (probably)</span>
         </div>
         <div class="main-cont">
             <div class="bannerBox">
@@ -122,7 +124,7 @@
               <span id="i386chat" class="project_title">
                 <a href="#i386chat">#</a> i386chat
                 </span><br />
-                i386chat was a web-based chat application written using node.JS and socket.IO. Multiple iterations existed, and a lot of fun was had in the work we put in altogether as a group. I've open sourced what I can, and may in future ask other contributors if they're willing to unprivate the repositories in the organization.<br />
+                i386chat was a web-based chat application written using Node.JS and socket.IO. Multiple iterations existed, and a lot of fun was had in the work we put in altogether as a group. I've open sourced what I can, and <s>may in future ask other contributors if they're willing to unprivate the repositories in the organization.</s> I wrote a blog post about i386chat, <a href="/posts/i386chat.html">here</a>!<br />
                 <a href="https://github.com/i386chat">GitHub Organization</a>
               </div>
 
@@ -140,6 +142,8 @@
         </div>
       </div>
   </div>
-<script src="https://womp.gay/main.js"></script>
-</body>
+<script src="/ffxiv_egg.js"></script>
+<script src="/tagline.js"></script>
+<script src="/logo.js"></script>
+<script src="/nepeta.js"></script></body>
 </html>

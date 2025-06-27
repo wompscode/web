@@ -6,13 +6,18 @@
     <title>womp</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onmousemove="cursorData(event)">
+<div style="top: 0;" id="nepeta" class="nepeta">
+    <img src="images/nepeta.gif">
+</div>
+<span id="explosion"></span>
 <div class="cont">
     <div class="main-cont">
         <div class="bannerBox">
-            <img alt="stylised logo that says womp with a star after it" src="logo.svg" class="logo" />
-            <br>
-            <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tag">can be trusted with nuclear weaponry (probably)</span>
+            <div class="logoContainer">
+                <img alt="stylised logo that says womp with a star after it" src="logo.svg" id="logo" class="logo" />
+            </div>
+            <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tagline">can be trusted with nuclear weaponry (probably)</span>
         </div>
         <div class="main-cont">
             <div class="bannerBox">
@@ -21,11 +26,18 @@
             </div>
         </div>
         <div class="main-cont">
-            <div class="bannerBox"> i'm <a title="graphic design is my passion" class="my_name" href="https://pronouns.womp.gay">phoebe faith</a>! i make things that i want and put them online so other people who want the same thing can have the thing i make - you can see my portfolio of things on my <a href="/projects/">projects</a> page. i study games. i also sometimes write articles about the things i make/do <a href="posts/posts.html">here</a>.<br />
-                <br /> i listen to lots of <span class="flatList-cont">
-              <span class="flatList-content">Porter Robinson</span>, <span class="flatList-content">Justice</span>, <span class="flatList-content">underscores</span>, and <span class="flatList-content">Jane Remover</span>: you should take a look at my <a href="https://www.last.fm/user/wxmpirl">last.fm</a> for a more comprehensive idea of what i listen to.</span>
-                <br /> <br /> i mostly play <span class="flatList-cont">
-              <span id="ffxiv" onmouseenter="ffxiv_onme()" onmouseleave="ffxiv_onml()" class="flatList-content">Final Fantasy XIV Online</span>, <span class="flatList-content">Balatro</span>, and sometimes <span class="flatList-content">ULTRAKILL</span>.<br /><br />you can reach me via <a class="my_name" href="mailto:phoebe@womp.gay">phoebe@womp.gay</a> and i'll get back to you.</span>
+            <div class="bannerBox">
+                hey! i'm <a title="graphic design is my passion" class="my_name" href="https://pronouns.womp.gay">phoebe faith</a>!
+                <br />
+                i make things that i want and put them online so other people who want the same thing can have the thing i make - you can see my portfolio of things on my <a href="/projects/">projects</a> page. i study games. i also sometimes write articles about the things i make/do <a href="posts/posts.html">here</a>.
+                <br />
+                <br />
+                i listen to lots of Porter Robinson, Jane Remover, underscores and Quadeca: you should look at my <a href="https://last.fm/user/wxmpirl">last.fm</a> for a better idea of what i listen to though.
+                <br />
+                i mostly play <span class="ffxiv">Final Fantasy XIV Online</span>: i totally think you should play <span title="thanks for the virtual crack, Nat!">Balatro</span>, ULTRAKILL and OFF. i really like <a href="https://homestuck.net" onmouseenter="toggleNepeta()">homestuck</a>!
+                <br />
+                <br />
+                you can reach me via <a class="my_name" href="mailto:phoebe@womp.gay">phoebe@womp.gay</a> and i'll get back to you.
             </div>
         </div>
         <!--<div class="main-cont">
@@ -33,6 +45,9 @@
         </div>-->
     </div>
 </div>
-<script src="main.js"></script>
+<script src="/ffxiv_egg.js"></script>
+<script src="/tagline.js"></script>
+<script src="/logo.js"></script>
+<script src="/nepeta.js"></script>
 </body>
 </html>

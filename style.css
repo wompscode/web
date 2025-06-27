@@ -1,15 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap');
-@font-face {
-    font-family: "FreePixel";
-    src: url("fonts/FreePixel.ttf") format("truetype");
-}
 
 :root {
     --background: rgb(6, 6, 6);
     --banner-background: rgb(10, 10, 10);
     --banner-hover: rgb(14, 14, 14);
     --sub_banner-background: rgb(12, 12, 12);
-    /*--sub_banner-hover: rgb(11, 11, 11);*/
     --sub_banner-hover: #1e1a22;
     --text-color: #c6b0df;
     --a-color: #ab97c2;
@@ -18,6 +13,7 @@
 html, body {
     background-color: var(--background);
     color: var(--text-color);
+    height: 100%;
     box-sizing: border-box;
     font-size:16px;
     font-family: "Geist", "Geist Mono", sans-serif;
@@ -38,7 +34,6 @@ a {
 a:hover {
     background-color: var(--a-color);
     color: var(--banner-background);
-/*    font-size: 16px;*/
     transform:scale(1.05);
 }
 
@@ -77,7 +72,6 @@ a:hover {
 .bannerBox .sub_bannerBox a:hover {
     background-color: var(--a-color);
     color: var(--sub_banner-background);
-/*    font-size: 16px;*/
     transform:scale(1.05);
 }
 
@@ -156,7 +150,11 @@ a:hover {
 }
 
 .logo:hover {
-    transform:scale(1.05) rotate(1.6deg) !important;
+    transform:scale(1.05) rotate(1.6deg);
+}
+
+.bigger {
+    transform:scale(1.15) rotate(2.6deg) !important;
 }
 
 .container-padded {
@@ -191,4 +189,30 @@ h1 {
     -webkit-background-clip: text !important;
     transform:matrix(1.065, 0.015, 0.015, 1.065, 0, 0) !important;
     transition: transform .2s ease-in-out !important;
+}
+
+.explosion {
+    z-index: 2;
+    position: absolute;
+    width: 64px;
+    height:auto;
+    pointer-events: none;
+}
+
+.ffxiv {
+    transition: .2s ease-in-out;
+}
+
+.nepeta {
+    position:absolute;
+    display: none;
+    z-index: 9999;
+    transition: left .02s ease-in-out, top .02s ease-in-out;
+    text-align: center;
+    pointer-events: none;
+}
+
+.nepeta img {
+    width: 64px;
+    height: auto;
 }

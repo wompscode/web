@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="https://womp.gay/style.css">
 </head>
 <body>
+<span id="explosion"></span>
 <div class="cont">
     <div class="main-cont">
         <div class="bannerBox">
-            <img alt="stylised logo that says womp with a star after it" src="https://womp.gay/logo.svg" class="logo" />
-            <br>
-            <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tag">can be trusted with nuclear weaponry (probably)</span>
+            <div class="logoContainer">
+                <img alt="stylised logo that says womp with a star after it" src="/logo.svg" id="logo" class="logo" />
+            </div>
+            <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tagline">can be trusted with nuclear weaponry (probably)</span>
         </div>
         <div class="main-cont">
             <div class="bannerBox">
@@ -38,7 +40,7 @@
                                 <li>to keep it concise: vrchat is moving towards a very roblox-like monetisation scheme, that encourages people to produce many smaller items in worlds to build up as much abstract in-game-currency as possible, as there is a limit to how much you have to have before you can cash out. i do not like this. all content i produce in future, if any at all, will have no monetisation in world. (i should turn this into a proper blog article)</li>
                         </ul></li>
                     <li>there's nothing i've really wanted to make. i've thought about finally remastering until tomorrow, but i just don't feel like it when i get around to doing it.</li>
-                    <li id="ffxiv" onmouseenter="ffxiv_onme()" onmouseleave="ffxiv_onml()">Final Fantasy XIV Online</li>
+                    <li id="ffxiv" class="ffxiv">Final Fantasy XIV Online</li>
                 </ul>
             </div>
         </div>
@@ -142,6 +144,8 @@
       </div>
     </div>
 </div>
-<script src="https://womp.gay/main.js"></script>
-</body>
+<script src="/ffxiv_egg.js"></script>
+<script src="/tagline.js"></script>
+<script src="/logo.js"></script>
+<script src="/nepeta.js"></script></body>
 </html>
