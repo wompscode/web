@@ -1,9 +1,12 @@
+// phoebe faith 2025
+// Technically this does more than just make nepeta follow your cursor, but it's primarily nepeta.
+// You can't fight the Homestuck.
+
 var nepeta = document.querySelector(".nepeta")
 var nepeta_follow = false;
 
 var x = 0;
 var y = 0;
-
 
 function slide(_, top, left) {
     if(top) _.style.top = top+"px";

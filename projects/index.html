@@ -12,41 +12,45 @@
     <meta property="og:image" content="https://womp.gay/images/nepeta.gif" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>womp</title>
-    <link rel="stylesheet" href="https://womp.gay/style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body onmousemove="cursorData(event)">
 <span id="explosion"></span>
-<div class="cont">
-    <div class="main-cont">
-        <div class="bannerBox">
+<div class="pageContainer">
+    <div class="container">
+        <div class="box">
             <div class="logoContainer">
                 <img alt="stylised logo that says womp with a star after it" src="/logo.svg" id="logo" class="logo" />
             </div>
             <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tagline">can be trusted with nuclear weaponry (probably)</span>
         </div>
-        <div class="main-cont">
-            <div class="bannerBox">
+        <div class="container">
+            <div class="box">
                 <a href="/">home</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a class="selectedPage" href="/projects/">projects</a>&nbsp;&nbsp;-&nbsp;&nbsp; <a href="https://bluesky.womp.gay">bluesky</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://twitter.com/psychosispup">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://soundcloud.com/w0m_p">soundcloud</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://github.com/wompscode">github</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://vrchat.com/home/user/usr_9e9428fe-f206-4c1d-967b-a6a87e746154">vrchat</a>
                 <br />
             </div>
         </div>
-        <div class="main-cont">
-            <div class="bannerBox"> you can find all of my personal projects on my main <a href="https://github.com/wompscode">github</a>. <br /> i also have a page dedicated to all of my <a href="vrchat">vrchat</a> projects. </div>
+        <div class="container">
+            <div class="box"> you can find all of my personal projects on my main <a href="https://github.com/wompscode">github</a>. <br /> i also have a page dedicated to all of my <a href="vrchat">vrchat</a> projects. </div>
         </div>
-        <div class="main-cont">
-            <div class="bannerBox">
+        <div class="container">
+            <div class="box">
                 <h1 id="main_projects">main projects</h1>
 
-                <div class="sub_bannerBox">
+                <div class="innerBox">
                   <span id ="wtfisthebatteryat" class="project_title">
                     <a href="#wtfisthebatteryat">#</a> WTFIsTheBatteryAt
                     </span><br />
-                    I don't like PlayStation Accessories, and needed a way to get my battery percentage shown. It's since expanded into a bit more, and I'm currently working on a 2.0 release, with plugin support.<br /> It's got a notification tray battery percentage display along, notifications for low percentage, and LED colour settings. <br />
+                    <div style="width:80%; display:inline-block;">
+                    I don't like PlayStation Accessories, and needed a way to get my battery percentage shown. It's since expanded into a bit more, and I'm currently working on a 2.0 release, with plugin support.<br /> It's got a notification tray battery percentage display along, notifications for low percentage, and LED colour settings.
+                    </div>
+                    <img style="height: 100px; width:auto; float:right; vertical-align: center;" src="../images/wtfitba_logo.png"/>
+                     <br />
                     <a href="https://github.com/wompscode/WTFIsTheBatteryAt/releases/latest">Latest Release</a> / <a href="https://github.com/wompscode/WTFIsTheBatteryAt">Source Code</a>
                   </div>
                 
                 <br />
-                <div class="sub_bannerBox">
+                <div class="innerBox">
                   <span id="pebs" class="project_title">
                     <a href="#pebs">#</a> pebs
                     </span><br />
@@ -55,7 +59,7 @@
                   </div>
     
                 <br />
-                <div class="sub_bannerBox">
+                <div class="innerBox">
                   <span id="phdt" class="project_title">
                     <a href="#phdt">#</a> phdt
                     </span><br />
@@ -64,16 +68,19 @@
                   </div>
     
                 <br />
-                <div class="sub_bannerBox">
+                <div class="innerBox">
                   <span id="palc" class="project_title">
                     <a href="#palc">#</a> palc
                     </span><br />
-                    Phoebe's Automated Library Converter is a tool I made that recursively goes through a specified directory looking for audio files to re-encode with your chosen codec. Uses FFMpegCore (which is an ffmpeg wrapper for C#) for re-encoding and ATL for .NET for metadata cloning.<br />
+                    <div style="width:85%; vertical-align:center; display:inline-block;">
+                        Phoebe's Automated Library Converter is a tool I made that recursively goes through a specified directory looking for audio files to re-encode with your chosen codec. Uses FFMpegCore (which is an ffmpeg wrapper for C#) for re-encoding and ATL for .NET for metadata cloning.</div>
+                        <img style="position:relative; top:-20px; height: 100px; width:auto; float:right;" src="../images/palc_logo_half.png">
+                        <br />
                     <a href="https://github.com/wompscode/palc/releases/latest">Latest Release</a> / <a href="https://github.com/wompscode/palc">Source Code</a>
                   </div>
 
                 <br />
-                <div class="sub_bannerBox">
+                <div class="innerBox">
                   <span id="psbg" class="project_title">
                     <a href="#psbg">#</a> psbg
                     </span><br />
@@ -83,7 +90,7 @@
                   </div>
 
                 <br />    
-                <div class="sub_bannerBox">
+                <div class="innerBox">
                   <span id="pirem" class="project_title">
                     <a href="#pirem">#</a> pirem
                     </span><br />
@@ -93,7 +100,7 @@
                   </div>
 
                 <br />   
-                <div class="sub_bannerBox">
+                <div class="innerBox">
                   <span id="discpywalnet" class="project_title">
                     <a href="#discpywalnet">#</a> discpywalNET
                     </span><br />
@@ -103,7 +110,7 @@
 
                 <br />
                 
-                <div class="sub_bannerBox">
+                <div class="innerBox">
                   <span id="timcsweeney" class="project_title">
                     <a href="#timcsweeney">#</a> TimCSweeney
                     </span><br />
@@ -113,7 +120,7 @@
 
                 <br />
     
-                <div class="sub_bannerBox">
+                <div class="innerBox">
                   <span id="ffxiv" class="project_title">
                     <a href="#ffxiv">#</a> FFXIV Plugins
                     </span><br />
@@ -124,21 +131,26 @@
 
 
         </div>
-        <div class="main-cont">
-          <div class="bannerBox">
+        <div class="container">
+          <div class="box">
             <h1 id="old_projects">old projects</h1>
 
-            <div class="sub_bannerBox">
+            <div class="innerBox">
               <span id="i386chat" class="project_title">
                 <a href="#i386chat">#</a> i386chat
                 </span><br />
-                i386chat was a web-based chat application written using Node.JS and socket.IO. Multiple iterations existed, and a lot of fun was had in the work we put in altogether as a group. I've open sourced what I can, and <s>may in future ask other contributors if they're willing to unprivate the repositories in the organization.</s> I wrote a blog post about i386chat, <a href="/posts/i386chat.html">here</a>!<br />
+                <div style="width:85%; vertical-align:center; display:inline-block;">
+                i386chat was a web-based chat application written using Node.JS and socket.IO. Multiple iterations existed, and a lot of fun was had in the work we put in altogether as a group. I've open sourced what I can, and <s>may in future ask other contributors if they're willing to unprivate the repositories in the organization.</s> I wrote a blog post about i386chat, <a href="/posts/i386chat.html">here</a>!
+                </div>
+                <img style="position:relative; top:-20px; height: 100px; width:auto; float:right;" src="../images/i386.png">
+
+                <br />
                 <a href="https://github.com/i386chat">GitHub Organization</a>
               </div>
 
             <br />
 
-            <div class="sub_bannerBox">
+            <div class="innerBox">
               <span id="discpywal" class="project_title">
                 <a href="#discpywal">#</a> discpywal
                 </span><br />

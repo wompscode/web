@@ -1,3 +1,6 @@
+// phoebe faith 2025
+// Finds all elements with the class .ffxiv and adds mouseenter/mouseleave events to replace them with the Greatest Copypasta Ever
+
 const elements = document.querySelectorAll(".ffxiv");
 
 function enter(element) {
