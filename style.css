@@ -39,7 +39,11 @@ a:hover {
 }
 
 .selectedPage {
-    font-style: italic;
+    font-weight: 600;
+    text-decoration: none;
+}
+.selectedPage::before {
+    content: '>> '
 }
 
 .pageContainer {
@@ -84,17 +88,33 @@ a:hover {
 
 @media only screen and (max-width: 400px) and (min-width: 376px){
     .box {
-        width: 360px !important;
+        width: 375px !important;
     }
 }
-
-@media only screen and (max-width: 600px) and (min-width: 401px){
+@media only screen and (max-width: 500px) and (min-width: 401px){
     .box {
         width: 380px !important;
     }
 }
+@media only screen and (max-width: 612px) and (min-width: 501px){
+    .box {
+        width: 480px !important;
+    }
+}
 
-@media only screen and (max-width: 850px) and (min-width: 601px) {
+@media only screen and (max-width: 730px) and (min-width: 613px){
+    .box {
+        width: 600px !important;
+    }
+}
+
+@media only screen and (max-width: 830px) and (min-width: 731px){
+    .box {
+        width: 700px !important;
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 830px) {
     .box {
         width: 775px !important;
     }
@@ -191,7 +211,7 @@ h1 {
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3) !important;
     color: #ab97c230 !important;
     -webkit-background-clip: text !important;
-    transform:matrix(1.065, 0.015, 0.015, 1.065, 0, 0) !important;
+    transform:matrix(1.082, 0.015, 0.015, 1.082, 0, 0) !important;
     transition: transform .2s ease-in-out !important;
 }
 

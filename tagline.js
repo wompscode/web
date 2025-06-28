@@ -11,6 +11,11 @@ const possible_taglines = [
     "1 prawn tile please",
     "This message could not be decrypted.",
     "God couldve made me autistic in literally anything else",
-    "I WARNED YOU ABOUT THE STAIRS BRO!!!!!"];
+    "I WARNED YOU ABOUT THE STAIRS BRO!!!!!",
+    "You can't fight the Homestuck.",
+    "uhhhhhhhhh yeaj",
+    "Reticulating splines",
+    "IF YOU'RE READING THIS, YOU'VE BEEN IN A COMA FOR ALMOST 20 YEARS NOW.",
+    "I've come to make an announcement: Shadow the Hedgehog's a bitch ass motherfucker"];
 tag.innerText = possible_taglines[Math.floor(Math.random() * possible_taglines.length)];
 tag.addEventListener('click', () => tag.innerText = possible_taglines[Math.floor(Math.random() * possible_taglines.length)]);

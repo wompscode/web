@@ -15,8 +15,8 @@ element.addEventListener("click", function() {
             let img = new Image();
             img.classList.add("explosion");
             _element.appendChild(img);
-            img.src = "https://womp.gay/images/explosion.gif";
             slide(img, y - 35, x - 25);
+            img.src = "https://womp.gay/images/explosion.gif";
             setTimeout(()=> {
                 img.remove();
                 clicked = 0;
