@@ -80,6 +80,10 @@ a:hover {
     transform:scale(1.05);
 }
 
+.rightImage {
+    float: right;
+}
+
 @media only screen and (max-width: 375px){
     .box {
         width: 330px !important;
@@ -90,21 +94,48 @@ a:hover {
     .box {
         width: 375px !important;
     }
+    .innerBox .rightImage {
+        top: 0 !important;
+        width:auto !important;
+        height:48px !important;
+    }
 }
 @media only screen and (max-width: 500px) and (min-width: 401px){
     .box {
         width: 380px !important;
+    }
+    .innerBox .rightImage {
+        top: 0 !important;
+        width:auto !important;
+        height:64px !important;
+    }
+    .innerBox .leftText {
+        width: 75% !important;
     }
 }
 @media only screen and (max-width: 612px) and (min-width: 501px){
     .box {
         width: 480px !important;
     }
+    .innerBox .rightImage {
+        top: 0 !important;
+        width:auto !important;
+        height:84px !important;
+    }
+    .innerBox .leftText {
+        width: 75% !important;
+    }
 }
 
 @media only screen and (max-width: 730px) and (min-width: 613px){
     .box {
         width: 600px !important;
+    }
+    .innerBox .rightImage {
+        top: 0 !important;
+    }
+    .innerBox .leftText {
+        width: 75% !important;
     }
 }
 
