@@ -277,6 +277,10 @@ h1 {
     background-color:transparent !important;
 }
 
+.webButton img {
+    border-radius: 2px !important;
+}
+
 .webButton:hover {
     transform: scale(1.25) !important;
 }

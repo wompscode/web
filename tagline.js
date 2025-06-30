@@ -16,6 +16,7 @@ const possible_taglines = [
     "uhhhhhhhhh yeaj",
     "Reticulating splines",
     "IF YOU'RE READING THIS, YOU'VE BEEN IN A COMA FOR ALMOST 20 YEARS NOW.",
-    "I've come to make an announcement: Shadow the Hedgehog's a bitch ass motherfucker"];
+    "I've come to make an announcement: Shadow the Hedgehog's a bitch ass motherfucker",
+    navigator.userAgent.indexOf("Firefox") > -1 ? "I like Firefox too :)" : "zzzzzzzz"];
 tag.innerText = possible_taglines[Math.floor(Math.random() * possible_taglines.length)];
 tag.addEventListener('click', () => tag.innerText = possible_taglines[Math.floor(Math.random() * possible_taglines.length)]);

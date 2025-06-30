@@ -27,6 +27,7 @@ function cursorData(event) {
 
 function toggleNepeta() {
     nepeta_follow = !nepeta_follow;
+    slide(nepeta, y - 50, x - 35);
     nepeta.style.display = nepeta_follow ? "block" : "none"
 }
 window.onload = function() {
