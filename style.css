@@ -275,10 +275,12 @@ h1 {
 .webButton {
     transition: .2s ease-in-out !important;
     background-color:transparent !important;
+    image-rendering: pixelated !important;
 }
 
 .webButton img {
     border-radius: 2px !important;
+    image-rendering: pixelated !important;
 }
 
 .webButton:hover {
