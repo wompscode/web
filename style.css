@@ -274,12 +274,9 @@ h1 {
 
 .webButton {
     transition: .2s ease-in-out !important;
-    background-color: transparent !important;
+    background-color:transparent !important;
 }
 
 .webButton:hover {
-    transform: scale(1.5) !important;
-    text-decoration: none !important;
-    background-color: transparent !important;
-    color:transparent !important;
+    transform: scale(1.25) !important;
 }

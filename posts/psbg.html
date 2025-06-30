@@ -2,15 +2,54 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="psbg_pageTitle">psbg: A Retrospective</title>
-    <link rel="stylesheet" href="../style.css">
+    <title id="psbg_pageTitle">womp: psbg: A Retrospective</title>
+    <link rel="stylesheet" href="https://womp.gay/style.css">
     <style>
         img {
             width: 768px;
             height:auto;
         }
-        
+
+        @media only screen and (max-width: 375px){
+            img {
+                width: 330px !important;
+            }
+        }
+
+        @media only screen and (max-width: 400px) and (min-width: 376px){
+            img {
+                width: 375px !important;
+            }
+        }
+        @media only screen and (max-width: 500px) and (min-width: 401px){
+            img {
+                width: 380px !important;
+            }
+        }
+        @media only screen and (max-width: 612px) and (min-width: 501px){
+            img {
+                width: 480px !important;
+            }
+        }
+
+        @media only screen and (max-width: 730px) and (min-width: 613px){
+            img {
+                width: 600px !important;
+            }
+        }
+        @media only screen and (max-width: 830px) and (min-width: 731px){
+            img {
+                width: 700px !important;
+            }
+        }
+
+        @media only screen and (max-width: 850px) and (min-width: 830px) {
+            img {
+                width: 775px !important;
+            }
+        }
     </style>
+
 </head>
 <body onmousemove="cursorData(event)">
 <span id="explosion"></span>
@@ -18,89 +57,89 @@
     <div class="container">
         <div class="box">
             <div class="logoContainer">
-                <img alt="stylised logo that says womp with a star after it" src="/logo.svg" id="logo" class="logo" />
+                <img alt="stylised logo that says womp with a star after it" src="https://womp.gay/logo.svg" id="logo" class="logo" />
             </div>
             <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tagline">can be trusted with nuclear weaponry (probably)</span>
         </div>
-        <div class="container">
-            <div class="box">
-                <a href="/">home</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/projects/">projects</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/posts/">posts</a>&nbsp;&nbsp;-&nbsp;&nbsp; <a href="https://bluesky.womp.gay">bluesky</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://twitter.womp.gay">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://github.com/wompscode">github</a>
-                <br>
-            </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <a href="/" class="selectedPage">home</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/projects/">projects</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/posts/">posts</a>&nbsp;&nbsp;-&nbsp;&nbsp; <a href="https://bluesky.womp.gay">bluesky</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://twitter.womp.gay">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://github.com/wompscode">github</a>
+            <br />
         </div>
-        <div class="container">
-            <div class="box">
-                <a href="/posts/" id="psbg_goBack">&lt;--</a>
-                <h1 id="psbg_articleTitle">psbg: A Retrospective</h1> 
-                <span id="psbg_articleDate">3/5/2025</span> - <span id="psbg_articleAuthor">phoebe</span>
-            </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <a href="/posts/" id="psbg_goBack">&lt;--</a>
+            <h1 id="psbg_articleTitle">psbg: A Retrospective</h1>
+            <span id="psbg_articleDate">3/05/2025</span> - <span id="psbg_articleAuthor">phoebe</span>
         </div>
-        <div class="container">
-            <div class="box">
-                <div id="psbg_articleContent"><p>I love to write my own tools: this is no secret, and something that's evident if you look at my GitHub for even a second. <a href="https://github.com/wompscode/pebs">pebs</a>, <a href="https://github.com/wompscode/palc">palc</a>, and <a href="https://github.com/wompscode/phdt">phdt</a> all came to exist, both out of need and just boredom. For all the tasks that these tools do, there are plenty of other options - but where's the fun in that.</p>
-<p><a href="https://github.com/wompscode/psbg">psbg</a> came to exist because I want to try to write more about the things I make, and I thought maybe a blog could supplement this want. I could've used any number of static site generators for this, but obviously - making my own made the most sense to me at the time. I don't regret the decision either.</p>
-<p>I wrote psbg in C# because, I'm not sure if anyone's noticed, I like to use C# (even with the protests of some of the people I know. I don't know how to use Rust, and I <em>don't want to learnnnn!!!!</em>).</p>
-<p>At the start of working on psbg, I had no idea how I was going to:</p>
-<ul>
-<li>read and convert Markdown to HTML
-<ul>
-<li>obviously, I knew there'd probably be a bajillion libraries that'd do exactly what I want.</li>
-</ul>
-</li>
-<li>manipulate HTML templates
-<ul>
-<li>I actually found a few ways to do this, one of which <em>really</em> pissed me off super fast. I'll talk about that in a moment.</li>
-</ul>
-</li>
-<li>store post metadata</li>
-</ul>
-<p>These tasks weren't mountains, but they're things that I had no clue how to deal with, so to StackOverflow it was.</p>
-<p>Markdown was easily and very quickly sorted. A quick Google Search and browse of NuGet pointed me toward <a href="https://www.nuget.org/packages/Markdig/">Markdig</a>. Awesome.<br>
-Markdig is incredibly simple, straight forward, and covers basically all I need it to. Parsing a string into Markdown was as simple as <code>Markdown.Parse(fileContent);</code>, and to HTML from there was as genuinely simple as <code>md.ToHtml();</code>.</p>
-<p>From there, I had a simple tool that'd read a single Markdown file and drop the contents of it into a HTML file. Cool, but it's not really a blogpost generator yet - you couldn't really set a title, specify a date, or who wrote it.</p>
-<p>You could just include it in each file, but then you'd not really be able to do any fancy-schmancy formatting of it, outside of what Markdown allowed for.</p>
-<p>So, I'd decided to make use of Markdown's ability to include &quot;frontmatter&quot;, which is just a block of YAML that could contain any number of key value pairs.</p>
-<p>This wasn't hard and lots of people online have done it already, and that fact alone made it super easy to get done. <a href="https://atashbahar.com/post/2020-06-16-extract-front-matter-in-dotnet-with-markdig">This</a> article from Khaled Atashbahar, was incredibly useful for parsing Markdown frontmatter - because I actually had no clue where to get started. I don't work with Markdown, outside typical usage.</p>
-<p>So now, post files look like this:</p>
-<pre><code class="language-markdown">---
+    </div>
+    <div class="container">
+        <div class="box">
+            <div id="psbg_articleContent" style="width: inherit;"><p>I love to write my own tools: this is no secret, and something that's evident if you look at my GitHub for even a second. <a href="https://github.com/wompscode/pebs">pebs</a>, <a href="https://github.com/wompscode/palc">palc</a>, and <a href="https://github.com/wompscode/phdt">phdt</a> all came to exist, both out of need and just boredom. For all the tasks that these tools do, there are plenty of other options - but where's the fun in that.</p>
+                <p><a href="https://github.com/wompscode/psbg">psbg</a> came to exist because I want to try to write more about the things I make, and I thought maybe a blog could supplement this want. I could've used any number of static site generators for this, but obviously - making my own made the most sense to me at the time. I don't regret the decision either.</p>
+                <p>I wrote psbg in C# because, I'm not sure if anyone's noticed, I like to use C# (even with the protests of some of the people I know. I don't know how to use Rust, and I <em>don't want to learnnnn!!!!</em>).</p>
+                <p>At the start of working on psbg, I had no idea how I was going to:</p>
+                <ul>
+                    <li>read and convert Markdown to HTML
+                        <ul>
+                            <li>obviously, I knew there'd probably be a bajillion libraries that'd do exactly what I want.</li>
+                        </ul>
+                    </li>
+                    <li>manipulate HTML templates
+                        <ul>
+                            <li>I actually found a few ways to do this, one of which <em>really</em> pissed me off super fast. I'll talk about that in a moment.</li>
+                        </ul>
+                    </li>
+                    <li>store post metadata</li>
+                </ul>
+                <p>These tasks weren't mountains, but they're things that I had no clue how to deal with, so to StackOverflow it was.</p>
+                <p>Markdown was easily and very quickly sorted. A quick Google Search and browse of NuGet pointed me toward <a href="https://www.nuget.org/packages/Markdig/">Markdig</a>. Awesome.<br />
+                    Markdig is incredibly simple, straight forward, and covers basically all I need it to. Parsing a string into Markdown was as simple as <code>Markdown.Parse(fileContent);</code>, and to HTML from there was as genuinely simple as <code>md.ToHtml();</code>.</p>
+                <p>From there, I had a simple tool that'd read a single Markdown file and drop the contents of it into a HTML file. Cool, but it's not really a blogpost generator yet - you couldn't really set a title, specify a date, or who wrote it.</p>
+                <p>You could just include it in each file, but then you'd not really be able to do any fancy-schmancy formatting of it, outside of what Markdown allowed for.</p>
+                <p>So, I'd decided to make use of Markdown's ability to include &quot;frontmatter&quot;, which is just a block of YAML that could contain any number of key value pairs.</p>
+                <p>This wasn't hard and lots of people online have done it already, and that fact alone made it super easy to get done. <a href="https://atashbahar.com/post/2020-06-16-extract-front-matter-in-dotnet-with-markdig">This</a> article from Khaled Atashbahar, was incredibly useful for parsing Markdown frontmatter - because I actually had no clue where to get started. I don't work with Markdown, outside typical usage.</p>
+                <p>So now, post files look like this:</p>
+                <pre><code class="language-markdown">---
 title: &quot;This is a post&quot;
 date: &quot;03/05/2025&quot;
 author: &quot;phoebe&quot;
 ---
 Something something uhh something.
 </code></pre>
-<p>Great! We've got metadata in posts, and.. nowhere to put that metadata on pages. Fuck.</p>
-<p>I'd completely glossed over the detail that just spitting converted Markdown into files isn't nice to look at, and well - you'd probably want to be able to customise your blog to how you want it.</p>
-<p>So, I had to figure out how I was going to allow people to make template pages.</p>
-<p>Initially, my first thought was: &quot;hmm, I could just like.. replace strings in strings.&quot;, but I didn't really like that. It just felt icky and hacky. Back to square one.<br>
-With a little bit of searching, I found Aspose.HTML - this library let me manipulate HTML as if I was using JavaScript. That was easy.</p>
-<p>.. right?<br>
-I copied a page off my website, turned it into what I expect a &quot;blog post&quot; to look like, and set a bunch of elements IDs to be distinct and logical to what they are. Hell, you can actually just look at the source of this page and see exactly what I mean.</p>
-<p>From here, things looked pretty good. I made it set the element responsible for title, date, and author and things looked fine. Sweet!<br>
-I tried to set the content of the element responsible for showing the post content to the converted Markdown, and I expected it to just be functional - only to be met with half the page broken and a highly disruptive evaluation copyright text from Aspose.</p>
-<p>Nice, okay. Fuck me. That's cool.</p>
-<p>I didn't see the NuGet page until I was trying to figure out what happened, and then I saw the &quot;Download FREE Trial&quot; image. Okay. That's.. fun.<br>
-So, I was again <strong>back at</strong></p>
-<h1>square fucking one</h1>
-<p>Okay.</p>
-<p>A little more Googling led me to <a href="https://www.nuget.org/packages/htmlagilitypack/">HTMLAgilityPack</a>, which was similar enough to Aspose.HTML in terms of functionality that I could just change some bits over and it worked. At this point, we are so fucking back and things could keep moving.</p>
-<p>From here, I got it to a point where I could generate a pretty HTML page from a Markdown file. I made it repeat this for each Markdown file in a directory and bam. You've got pretty HTML files, from a bunch of Markdown files.</p>
-<p>That's cool, and at this point - you could kind of use it like a blog. Pop it on a webserver that supported listing directories, and you'd kind of have it. I didn't like that though.</p>
-<p>This meant that I had to also make it generate a pretty list of posts. Fortunately, this was super easy and had no hitches. In fact, it actually was probably the easiest part of the entire project.<br>
-Oh well!</p>
-<p>At this point, psbg is functional as a static blog generator. It didn't copy images used in posts automatically, and is still unclean code-wise, but it works and that's what matters. Right?</p>
-<p>Actually - the &quot;at this point&quot; is now, the current time of writing. I'm writing this not only as a test of psbg, but as a way to just talk about the process of making it - which if you remember the start of this post, is the exact reason I wanted to start blogging in the first place: I want to talk about the things I make.</p>
-<p>There's a lot of changes I'd still like to make, and a lot of cleanup to do. I've got a great deal of spare time for a little, and I'll probably make use of that to finish psbg fully.</p>
-<p>To finish up: psbg is a static site generator intended for blogging. I had a lot of fun writing it, I intend to continue working on it, and I also really dislike Aspose.</p>
-<p><strong>6/5/25</strong>: psbg has been prettified a little bit, much like my other tools! logs are coloured, and contain information about what's happening at the time - such as errors if your template is missing pieces that would make an article unreadable. <img src="psbg_img1.png" alt="picture of psbg in action"><br>
-also now copies other files outside of just converting <code>.md</code>, as long as they're listed within the approved extensions in your config - this means including photos, like seen above is easier now. you'll probably still need to make adjustments to your template to fit them in: for mine, i had to limit image width to 768px (looked fine across most screen sizes) and set image height to auto. realistically, this shouldn't be an issue for most though.</p>
-<p>psbg is for the most part complete in what i want it for - i will eventually setup github actions to release builds whenever i publish changes, but until then - you need to compile it yourself.</p>
-<p><strong>29/5/25</strong>: you can now create summaries for the post list in your posts, and also style the post list however you want. small change, but a good one nonetheless I think :)</p>
-<p> <br>
- <br>
-I'd like to write a lot more about the things I make: the little tools, Discord bots, and my larger university projects. I'm not great at writing, and I'd like to change that.<br>
-If you'd like to see more small updates from me, you should probably follow my socials (Twitter, Bluesky, Mastodon, etc.). I'll probably make a post on one of those whenever I make a post here.</p>
-</div>
+                <p>Great! We've got metadata in posts, and.. nowhere to put that metadata on pages. Fuck.</p>
+                <p>I'd completely glossed over the detail that just spitting converted Markdown into files isn't nice to look at, and well - you'd probably want to be able to customise your blog to how you want it.</p>
+                <p>So, I had to figure out how I was going to allow people to make template pages.</p>
+                <p>Initially, my first thought was: &quot;hmm, I could just like.. replace strings in strings.&quot;, but I didn't really like that. It just felt icky and hacky. Back to square one.<br />
+                    With a little bit of searching, I found Aspose.HTML - this library let me manipulate HTML as if I was using JavaScript. That was easy.</p>
+                <p>.. right?<br />
+                    I copied a page off my website, turned it into what I expect a &quot;blog post&quot; to look like, and set a bunch of elements IDs to be distinct and logical to what they are. Hell, you can actually just look at the source of this page and see exactly what I mean.</p>
+                <p>From here, things looked pretty good. I made it set the element responsible for title, date, and author and things looked fine. Sweet!<br />
+                    I tried to set the content of the element responsible for showing the post content to the converted Markdown, and I expected it to just be functional - only to be met with half the page broken and a highly disruptive evaluation copyright text from Aspose.</p>
+                <p>Nice, okay. Fuck me. That's cool.</p>
+                <p>I didn't see the NuGet page until I was trying to figure out what happened, and then I saw the &quot;Download FREE Trial&quot; image. Okay. That's.. fun.<br />
+                    So, I was again <strong>back at</strong></p>
+                <h1>square fucking one</h1>
+                <p>Okay.</p>
+                <p>A little more Googling led me to <a href="https://www.nuget.org/packages/htmlagilitypack/">HTMLAgilityPack</a>, which was similar enough to Aspose.HTML in terms of functionality that I could just change some bits over and it worked. At this point, we are so fucking back and things could keep moving.</p>
+                <p>From here, I got it to a point where I could generate a pretty HTML page from a Markdown file. I made it repeat this for each Markdown file in a directory and bam. You've got pretty HTML files, from a bunch of Markdown files.</p>
+                <p>That's cool, and at this point - you could kind of use it like a blog. Pop it on a webserver that supported listing directories, and you'd kind of have it. I didn't like that though.</p>
+                <p>This meant that I had to also make it generate a pretty list of posts. Fortunately, this was super easy and had no hitches. In fact, it actually was probably the easiest part of the entire project.<br />
+                    Oh well!</p>
+                <p>At this point, psbg is functional as a static blog generator. It didn't copy images used in posts automatically, and is still unclean code-wise, but it works and that's what matters. Right?</p>
+                <p>Actually - the &quot;at this point&quot; is now, the current time of writing. I'm writing this not only as a test of psbg, but as a way to just talk about the process of making it - which if you remember the start of this post, is the exact reason I wanted to start blogging in the first place: I want to talk about the things I make.</p>
+                <p>There's a lot of changes I'd still like to make, and a lot of cleanup to do. I've got a great deal of spare time for a little, and I'll probably make use of that to finish psbg fully.</p>
+                <p>To finish up: psbg is a static site generator intended for blogging. I had a lot of fun writing it, I intend to continue working on it, and I also really dislike Aspose.</p>
+                <p><strong>6/5/25</strong>: psbg has been prettified a little bit, much like my other tools! logs are coloured, and contain information about what's happening at the time - such as errors if your template is missing pieces that would make an article unreadable. <img src="psbg_img1.png" alt="picture of psbg in action" /><br />
+                    also now copies other files outside of just converting <code>.md</code>, as long as they're listed within the approved extensions in your config - this means including photos, like seen above is easier now. you'll probably still need to make adjustments to your template to fit them in: for mine, i had to limit image width to 768px (looked fine across most screen sizes) and set image height to auto. realistically, this shouldn't be an issue for most though.</p>
+                <p>psbg is for the most part complete in what i want it for - i will eventually setup github actions to release builds whenever i publish changes, but until then - you need to compile it yourself.</p>
+                <p><strong>29/5/25</strong>: you can now create summaries for the post list in your posts, and also style the post list however you want. small change, but a good one nonetheless I think :)</p>
+                <p> <br />
+                     <br />
+                    I'd like to write a lot more about the things I make: the little tools, Discord bots, and my larger university projects. I'm not great at writing, and I'd like to change that.<br />
+                    If you'd like to see more small updates from me, you should probably follow my socials (Twitter, Bluesky, Mastodon, etc.). I'll probably make a post on one of those whenever I make a post here.</p>
             </div>
         </div>
     </div>
@@ -108,5 +147,7 @@ If you'd like to see more small updates from me, you should probably follow my s
 <script src="/ffxiv_egg.js"></script>
 <script src="/tagline.js"></script>
 <script src="/logo.js"></script>
-<script src="/nepeta.js"></script></body>
+<script src="/nepeta.js"></script>
+<script src="/misc.js"></script>
+</body>
 </html>

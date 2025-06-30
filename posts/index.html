@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="psbg_pageTitle">womp</title>
-    <link rel="stylesheet" href="../style.css">
+    <title id="psbg_pageTitle">womp: Posts</title>
+    <link rel="stylesheet" href="https://womp.gay/style.css">
     <style>
-        ul, li {
-            list-style-position: inside;
+        img {
+            width: 768px;
+            height:auto;
         }
     </style>
 </head>
@@ -16,24 +17,26 @@
     <div class="container">
         <div class="box">
             <div class="logoContainer">
-                <img alt="stylised logo that says womp with a star after it" src="/logo.svg" id="logo" class="logo" />
+                <img alt="stylised logo that says womp with a star after it" src="https://womp.gay/logo.svg" id="logo" class="logo" />
             </div>
             <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tagline">can be trusted with nuclear weaponry (probably)</span>
         </div>
-        <div class="container">
-            <div class="box">
-                <a href="/">home</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/projects/">projects</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a class="selectedPage" href="/posts/">posts</a>&nbsp;&nbsp;-&nbsp;&nbsp; <a href="https://bluesky.womp.gay">bluesky</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://twitter.womp.gay">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://github.com/wompscode">github</a>
-                <br>
-            </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <a href="/" class="selectedPage">home</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/projects/">projects</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/posts/">posts</a>&nbsp;&nbsp;-&nbsp;&nbsp; <a href="https://bluesky.womp.gay">bluesky</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://twitter.womp.gay">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://github.com/wompscode">github</a>
+            <br />
         </div>
-        <div class="container">
-            <div class="box">
-                <h1>Posts</h1>
-                <div id="psbg_list"><h2 id="psbg_2025">2025</h2><li><a href="i386chat.html">i386chat: What was that all about?</a> - phoebe (30/5/2025)
-<ul><li style="list-style-type: none;">I love chatting to people on the internet - it's no secret whatsoever. Lots of people use many chat applications, but I'm pretty sure nobody's using i386chat.</li></ul>
-</li><li><a href="psbg.html">psbg: A Retrospective</a> - phoebe (3/5/2025)
-<ul><li style="list-style-type: none;">I wrote my own static blog generator: I learnt that I fucking hate Aspose.</li></ul>
-</li></div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h1>Posts</h1>
+            <div style="list-style-position: inside; width:inherit;" id="psbg_list"><h2>2025</h2><li><a href="i386chat.html">i386chat: What was that all about?</a> - phoebe (30/05/2025)
+                <ul><li style="list-style-type: none; list-style-position: inside;">I love chatting to people on the internet - it's no secret whatsoever. Lots of people use many chat applications, but I'm pretty sure nobody's using i386chat.</li></ul>
+            </li>
+                <li><a href="psbg.html">psbg: A Retrospective</a> - phoebe (3/05/2025)
+                    <ul><li style="list-style-type: none; list-style-position: inside;">I wrote my own static blog generator: I learnt that I fucking hate Aspose.</li></ul>
+                </li>
             </div>
         </div>
     </div>
@@ -41,5 +44,7 @@
 <script src="/ffxiv_egg.js"></script>
 <script src="/tagline.js"></script>
 <script src="/logo.js"></script>
-<script src="/nepeta.js"></script></body>
+<script src="/nepeta.js"></script>
+<script src="/misc.js"></script>
+</body>
 </html>

@@ -2,15 +2,54 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="psbg_pageTitle">i386chat: What was that all about?</title>
-    <link rel="stylesheet" href="../style.css">
+    <title id="psbg_pageTitle">womp: i386chat: What was that all about?</title>
+    <link rel="stylesheet" href="https://womp.gay/style.css">
     <style>
         img {
             width: 768px;
             height:auto;
         }
-        
+
+        @media only screen and (max-width: 375px){
+            img {
+                width: 330px !important;
+            }
+        }
+
+        @media only screen and (max-width: 400px) and (min-width: 376px){
+            img {
+                width: 375px !important;
+            }
+        }
+        @media only screen and (max-width: 500px) and (min-width: 401px){
+            img {
+                width: 380px !important;
+            }
+        }
+        @media only screen and (max-width: 612px) and (min-width: 501px){
+            img {
+                width: 480px !important;
+            }
+        }
+
+        @media only screen and (max-width: 730px) and (min-width: 613px){
+            img {
+                width: 600px !important;
+            }
+        }
+        @media only screen and (max-width: 830px) and (min-width: 731px){
+            img {
+                width: 700px !important;
+            }
+        }
+
+        @media only screen and (max-width: 850px) and (min-width: 830px) {
+            img {
+                width: 775px !important;
+            }
+        }
     </style>
+
 </head>
 <body onmousemove="cursorData(event)">
 <span id="explosion"></span>
@@ -18,211 +57,211 @@
     <div class="container">
         <div class="box">
             <div class="logoContainer">
-                <img alt="stylised logo that says womp with a star after it" src="/logo.svg" id="logo" class="logo" />
+                <img alt="stylised logo that says womp with a star after it" src="https://womp.gay/logo.svg" id="logo" class="logo" />
             </div>
             <span style="cursor:pointer; user-select: none; -ms-user-select: none; -webkit-user-select: none;" id="tagline">can be trusted with nuclear weaponry (probably)</span>
         </div>
-        <div class="container">
-            <div class="box">
-                <a href="/">home</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/projects/">projects</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/posts/">posts</a>&nbsp;&nbsp;-&nbsp;&nbsp; <a href="https://bluesky.womp.gay">bluesky</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://twitter.womp.gay">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://github.com/wompscode">github</a>
-                <br>
-            </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <a href="/" class="selectedPage">home</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/projects/">projects</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="/posts/">posts</a>&nbsp;&nbsp;-&nbsp;&nbsp; <a href="https://bluesky.womp.gay">bluesky</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://twitter.womp.gay">twitter</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a href="https://github.com/wompscode">github</a>
+            <br />
         </div>
-        <div class="container">
-            <div class="box">
-                <a href="/posts/" id="psbg_goBack">&lt;--</a>
-                <h1 id="psbg_articleTitle">i386chat: What was that all about?</h1> 
-                <span id="psbg_articleDate">30/5/2025</span> - <span id="psbg_articleAuthor">phoebe</span>
-            </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <a href="/posts/" id="psbg_goBack">&lt;--</a>
+            <h1 id="psbg_articleTitle">i386chat: What was that all about?</h1>
+            <span id="psbg_articleDate">30/05/2025</span> - <span id="psbg_articleAuthor">phoebe</span>
         </div>
-        <div class="container">
-            <div class="box">
-                <div id="psbg_articleContent"><p>I love chatting to people on the internet - it's no secret whatsoever. The internet brings people that otherwise never would've interacted with together, and I think that's incredibly beautiful.</p>
-<p>There's a bunch of different chatting applications, protocols, services - whatever. Many people use Discord, many people use WhatsApp, and hell: lots of people still use IRC in the big '25.</p>
-<p>But I'm pretty damn sure nobody uses i386chat - because, what the fuck even was i386chat?</p>
-<h1 id="prior"><a href="#prior">#</a> prior to i386chat</h1>
-I really loved to skirt past the restrictions laid upon us on computers at school. It was not only fun, because the technicians at my school hated it, but it just let me pretty much do nothing during school hours - because that's what most 15 year olds want to do in high school: nothing.
-<p>Many people used shitty free-VPNs (don't use them: they're not free because you're the product, they just want your data.), and that worked for the most part. They could get onto Discord, or Facebook Messenger or whatever they used to chat amongst themselves in different classes. It was just horrifyingly slow, and this led to just unenjoyable conversations with internet dropouts and whatnot. Some people realised they could use phone hotspots, or if they had enough pocket money or something, pay for a VPN - but these weren't ideal situations. We had fast schoolwide Wi-Fi, but just with a number of excessive restrictions.</p>
-<p>I promise you this is all relevant - because this is where the start of i386chat really was. Not at the start of the <a href="https://github.com/i386chat/i386chat_server">i386chat_server</a> repository, not even with the first true iteration of what the i386chat server was: it began with a terrible hodgepodge chatbox called Hellbox.
-No clue why I named it that honestly. I guess I just thought it was cool.</p>
-<p>Hellbox was something I created for me, my friends, and some others to chat amongst ourselves during class.</p>
-<p>Hosted at my house, our school never really cared that much about it and never blocked my domain because it just wasn't worthwhile for them. It was pretty fucking ugly, but it ultimately worked.</p>
-<p>It was created using the <a href="https://socket.io/docs/v4/tutorial/introduction">socket.io chat application tutorial</a> (although, this version of the tutorial is <em>way</em> newer, and way better written: super neat honestly, I'm happy to see it got some love over the years), with many extra additions over the few months worked on it including, but not limited to:</p>
-<ul>
-<li>the addition of Markdown support</li>
-<li>automated image embedding</li>
-<li>user registration
-<ul>
-<li>it was very finicky, and oh so incredibly insecure - it saved to a terribly put together JSON database.
-<ul>
-<li>I probably have the source for it laying around somewhere.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>individual rooms</li>
-</ul>
-<p>None of these features were particularly ground-breaking, or even very well written, but they sure as hell worked, and we used Hellbox almost constantly every day. It kept our teachers weirdly happy - probably because we were all much quieter in class.</p>
-<p>Unfortunately, I really don't have any screenshots - or even the source code of Hellbox!
-It is really lost to time - which does honestly suck a lot. (note: if I ever find it [super unlikely as fuck: a good bit of data loss has hit me over the years unfortunately], I will update this post with a link to lightly cleaned up source code for it.)</p>
-<p>I would really love to see this super old and highly insecure code - just to kind of see how I've improved over the years. It sits in the memory of those who used it, which is weirdly sweet I guess. It's something we all share, even though many of us don't really talk anymore.</p>
-<p>Anyway, Hellbox became mostly useless with the introduction of services like Microsoft Teams, as many schools began to utilise it: we all just made individual group chats in there. Many teachers knew we used them, and just didn't care 99% of the time.</p>
-<p>We were quiet in class, and yeah while we pissed away a lot of time, we still did our work.</p>
-<h1 id="first"><a href="#first">#</a> the first real iteration of i386chat</h1>
-i386chat began when I wanted to rewrite Hellbox. 
-<p>I wanted to properly learn how to use socket.io and include the functionality I wanted from the beginning, instead of terribly tacking code onto it as time went on: Hellbox suffered greatly from feature creep, and as a result had to be restarted semi-frequently. Not great.</p>
-<p>The really early iterations of i386chat weren't called i386chat at all: the domain was <code>cb.i386.tech</code>, standing for <strong>c</strong>hat<strong>b</strong>ox - and the working directory for it? <code>wchatbox</code>, very intelligently meaning <strong>w</strong>eb <strong>chatbox</strong>. Smart.</p>
-<p>It really wasn't anything really special, and it just was a non-persistent chatbox. (In fact, I liked the idea of it being non-persistent so much, that it became a long running detail about i386chat).</p>
-<p>I showed this off to the people on the <a href="https://discord.gg/ipod">/r/iPod Discord</a>, and it kind of went from there.</p>
-<p>A few people hopped on every so often, and we had a lot of fun just talking. (this really brings me back to my point of: I love chatting on the internet because keep in mind here - many of us are in completely different regions of the world, but we all connected in some way or another! I think that was the beauty of all of this really.)
-<span id="stallman"></span><img src="bredo.png" alt="bredo showing the first bot created for i386chat (prior to it's being called i386chat, as it was cb.i386.tech initially)"><br>
-It was super fun to just chat on here, because well - it was a really lightweight websocket based chat app. We just kind of wanted to see what we could get it to run on, and it was just a novelty for us to chat with one another on something that wasn't Discord.</p>
-<p>At some point, on the same day I put it up on the domain <code>cb.i386.tech</code>, only a few hours later, I changed it to <code>chat.i386.tech</code>, just for more clarity in what it was.</p>
-<p>Can you guess how we got to the name i386chat?</p>
-<p>Anyway, we had a lot of fun just chatting on this terrible first iteration.
-Finley made a pretty simple Electron wrapper, and mckinley made StallmanBot (pictured above), which was a simple bot (and actually the first bot!) that'd just look for the word <code>linux</code> in a message, and would just respond with the well known interjection copypasta.
-<img src="first_client.png" alt="Finley showing off an early desktop i386chat client."><br>
-Over time, I implemented a lot of things that many were accustomed to in chat applications:</p>
-<ul>
-<li>Separate rooms</li>
-<li>Nicknames</li>
-<li>&quot;Admin tags&quot;
-<ul>
-<li>This really was just intended for me to have a rainbow gradient name.
-<ul>
-<li>I'm vain. What else is to be said?</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>User adjustable colours for nicknames
-<ul>
-<li>Lots of people abused this one quickly to set colours that were borderline un-fucking-readable. It was kind of funny honestly.</li>
-</ul>
-</li>
-<li>User bios
-<ul>
-<li>I beat Discord to this one.
-<ul>
-<li>They added the About Me section in 2021, and I had this in i386chat in like late 2020. Sucks to suck.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Private messages
-<ul>
-<li>This kind of came as a byproduct to separate rooms, because my implementation of separate rooms just pushed me to create socket-to-socket private messaging.</li>
-</ul>
-</li>
-<li>Some degree of rate limiting
-<ul>
-<li>This really wasn't good, but it just kind of prevented mass spam at least.</li>
-</ul>
-</li>
-</ul>
-<p>The final version of the first iteration is actually still completely available on GitHub <a href="https://github.com/i386chat/i386chat_server/tree/master">here</a>.</p>
-<p>I published this almost exclusively because it was just neat to have laying around as not only a reference point, but also just as a little time capsule if you will.
-<img src="initial.png" alt="Initial commit for the i386chat_server repo"><br>
-I don't have the very first version anymore because I worked on it in place, and didn't use git until more people than just myself started working on it.
-No, I don't have that mindset anymore. I love version control now, because it's saved me from losing projects during periods of data loss - especially during university.
-<strong>Use version control, people.</strong></p>
-<p>Up until this point, i386chat was a completely solo venture. I'd just written this all by myself, and for the fun of it - and at some point, Finley decided to join in the project: and with this, we began working on expanding the server.</p>
-<h1 id="expansion"><a href="#expansion">#</a> server expansion</h1>
-Initially, the refactor was intended to be a clean-up of the server code.
-I say initially: because it veeeerrry quickly became clear to us that there was no cleaning it up - throwing it all out and beginning again *using* the original code as a guide was the right move forward.
-<p>Lots of major API changes were made, especially with the introduction of token based authentication.
-Up to this point, you could really easily impersonate someone by just setting your name to theirs. Blegh.</p>
-<p>Finley took on the token authentication and gateway redesign aspect of i386chat: at some point, it effectively just became a shadow of Discord's gateway structure.
-Account creation was super simplified, and you didn't have a traditional username/password structure, but rather that you'd generate a key associated with your account, and you'd use that for authentication.</p>
-<p>Lose that, and your account was <strong>gone</strong>. Not good, especially because losing a password is something you can recover from (most of the time): if you lose your token, it's gone <em>forever.</em></p>
-<p>I never liked this method of authentication - and I still don't actually. I hate services that use authentication that requires you to remember a stupidly long key. Give me a username and password field god dammit. But it was simple enough and functional enough for me.. at least it was when it was working: this branch of i386chat was suuuuuper fucking unstable, and would break if you so much as thought about it too hard.</p>
-<p>I didn't contribute a great deal to this branch of i386chat_server, so I don't actually have much knowledge on how it functioned, but fortunately as a part of its creation, Finley documented a great deal of things before implementation - and you're able to look at it <a href="https://github.com/i386chat/i386chat_docs">here</a>.<br>
-While I wrote much of the original iterations of the server and client, Finley really took the lead of programming for the <code>token-auth</code> branch - I still had a great deal of say in the direction we went in though. This documentation has been sitting dormant for about 5 years, private under our GitHub organization - prior writing this, I asked Finley if they'd be willing to set the visibility of these repos to public, and she was totally cool with it. You're able to take a look at it as much as you want! Neat, right?</p>
-<p>We also aimed to create some form of a proper desktop client for i386chat, but we honestly never even thought about it that often outside of the initial &quot;yeah, that'd be a good idea&quot; exchanged. There was an Electron client that existed really early on, but it was honestly just a wrapper around the web client, and it honestly fell out of date super quickly. (if you scroll up, you're actually able to see it in a screenshot!)
-It was still cool to see my shitty little chat server running as a desktop application, right next to Discord.</p>
-<p>It never got far because none of us really knew how to write native UI applications that looked as close as possible to the web client, so we always just gravitated towards Electron because <em>everything is Chrome in the future.....</em>
-<img src="zfHjS2R.png" alt="4 frames from the cartoon SpongeBob SquarePants where everything is turned into a metallic chrome finish."><br>
-<a href="https://www.reddit.com/r/spongebob/comments/q0zxr/everything_is_chrome_in_the_future/">image source</a></p>
-<h3 id="expansion_api"><a href="#expansion_api">#</a> api libraries + bots</h3>
-Libraries for Python and JavaScript were created for interfacing with the i386chat API, entirely intended for automated users. The Python one never got really that far outside of initial creation, but the JavaScript one was quite usable.
-A proper bot API was in progress, that was more limited than the user API, but would be way better documented publicly, but we put this on the back-burner when we decided we wanted to expand on the main user API first.
-<p>These libraries were written by bredo and Finley (listing respective to the language used).</p>
-<p>StallmanBot - the first bot for i386chat - written by mckinley didn't use any of these libraries, and instead just dealt with the API head-on. That was fine because initially, i386chat's API was super simplistic and honestly could be barely considered anything special. All it did was read messages, and respond accordingly: it'd search for linux in a message and respond with the very well-known copypasta written by Richard Stallman about the phrasing used when referring to Linux. Hilarious.</p>
-<p>You can see a screenshot of it in action earlier up <a href="#stallman">here</a>.
-<img src="8osspXj.jpeg" alt="A picture of Richard Stallman looking to the side angrily, with the words ABSOLUTELY PROPRIETARY under him."><br>
-<a href="https://imgur.com/new-background-of-windows-machine-8osspXj">image source</a></p>
-<h1 id="everyone"><a href="#everyone">#</a> so, where is everyone now?</h1>
-To put it really simply, we're all just really busy. 
-<p>Working on i386chat was really fun when we didn't really have responsibilities, and we were bored out of our minds during COVID, but we're all just doing our own things now.</p>
-<p>I'm studying, and the others are either studying, working or have just straight disappeared from the internet (come back bagel boy). Many of us are still friends and we still talk - <em>just not on i386chat</em>.</p>
-<h3 id="everyone_return"><a href="#everyone_return">#</a> do we ever intend to come back to this?</h3>
-Obviously, I can only ever really answer for myself: I've considered it.  
-I think I've gotten better at programming since the last time I've worked on i386chat_server (you can make your own judgements: look at anything I've written since), and I'd love to make something that is far more functional - but it'd be barely related to old i386chat at all, and likely only in name.  
-It'd be fun to work on this to break up the monotony of life, but I'm also just busy with university or playing Final Fantasy XIV (something something free trial).  
-  
-<p>I'm also pretty confident in saying that the others probably won't come back to work on anything though. They're busy, and doing way more important things in life now.</p>
-<h3 id="everyone_run"><a href="#everyone_run">#</a> can I still run an i386chat server?</h3>
-I'd say... probably yes? The code is all there, still intact and awful as we last left it. 
-<p>I can't make any promises that it's still functional in 2025, because it <em>is</em> <strong>5 years old</strong> by this point. Maybe I'll do a quick pass of the refactor branch and get it up to today's standards so you're at least able to run something as a sort of time capsule of how it once functioned: maybe I'll even run an i386chat server for shits and giggles, who knows?</p>
-<p>Would I recommend running it in its current state? Not really honestly.<br>
-It's super out of date, badly written and probably full of insecurities we've missed somehow - and if you do intend to do anything with it, you should 100% update as many dependencies as you are capable of doing so.<br>
-I don't know how many dependencies have changed since 2021/2022, so there's probably a good many breaking changes that would require you to go back into the code and fix things up.</p>
-<h1 id="end"><a href="#end">#</a> the end</h1>
-I liked making i386chat - it was a fun little project. I miss working on it sometimes, because it brought me and my friends together, and that was really fun - especially during the uncertain times during COVID. 
-<p>There was nothing really special about it whatsoever. Nothing set it apart from any other chat application out there. In fact, what set it apart probably was more of a reason to not use it: it was insecure, non-persistent, unstable (what a great combination) and just simply made for fun by a bunch of teenagers on the internet.<br>
-You had plenty of better options, and much of the discussion <em>during</em> the creation of i386chat was done on Discord - a dramatically better option over i386chat.</p>
-<p>Writing this brought back a lot of memories that probably wouldn't have come up again for quite some time, if ever again. Unfortunately, some of it is lost to the fact that the i386chat Discord was deleted once the project died off. My bad.</p>
-<p>As long ago as it was now, and as minimal as it looks from the outside - I think the time we spent using and working on i386chat contributed to our friendships greatly. It feels stupid to say, but I think we all had a lot of fun planning the work we did, talking about it, doing it and even using i386chat for funsies.</p>
-<p>Shoutout to Finley + bredo for their work and direct support with i386chat and my other friends from the /r/iPod Discord: Alice, Sawyer, Emma, Nick, Bailey, Lily and those I've missed. I'm glad to have met you all, and even though we've had disagreements over the years, we've still come back all together. I wouldn't have it any other way.</p>
-<p>To finish up, here's the links to a bunch of i386chat GitHub stuff.<br>
-<a href="https://github.com/i386chat">GitHub organization</a> (contains more bits and pieces that I didn't cover here)<br>
-<a href="https://github.com/i386chat/i386chat_server">i386chat_server</a><br>
-<a href="https://github.com/i386chat/i386chat_docs">i386chat_docs</a></p>
-<p>I hope that this was a somewhat interesting read and historical retelling of the process of i386chat's development.</p>
-<p>Keep on the look out - I've got more posts about things on the way, focusing on:</p>
-<ul>
-<li>Home automation using Home Assistant
-<ul>
-<li>I've fallen really hard into it all.
-<ul>
-<li>The small little things that you can do make that make life just a little easier are pretty cool!</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>The work I've done on psbg since the initial post on it.
-<ul>
-<li>You might have noticed on the post list page that there's summaries now.
-<ul>
-<li>That's new!</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>My gripes with
-<ul>
-<li>finding software that I like
-<ul>
-<li>I'm picky, and I want to complain about software just not meeting my expectations, and my looking into other options.</li>
-</ul>
-</li>
-<li>VRChat's poor current goals and direction
-<ul>
-<li>The Avatar Marketplace's structure upsets me greatly, and they keep blundering in some way or another.
-<ul>
-<li>I'd call VRChat a masterclass in shipping features close to dead on arrival.
-<ul>
-<li>(is that too mean? probably, but they keep shipping features too early. let things cook longer guys.)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <div id="psbg_articleContent" style="width: inherit;"><p>I love chatting to people on the internet - it's no secret whatsoever. The internet brings people that otherwise never would've interacted with together, and I think that's incredibly beautiful.</p>
+                <p>There's a bunch of different chatting applications, protocols, services - whatever. Many people use Discord, many people use WhatsApp, and hell: lots of people still use IRC in the big '25.</p>
+                <p>But I'm pretty damn sure nobody uses i386chat - because, what the fuck even was i386chat?</p>
+                <h1 id="prior"><a href="#prior">#</a> prior to i386chat</h1>
+                I really loved to skirt past the restrictions laid upon us on computers at school. It was not only fun, because the technicians at my school hated it, but it just let me pretty much do nothing during school hours - because that's what most 15 year olds want to do in high school: nothing.
+                <p>Many people used shitty free-VPNs (don't use them: they're not free because you're the product, they just want your data.), and that worked for the most part. They could get onto Discord, or Facebook Messenger or whatever they used to chat amongst themselves in different classes. It was just horrifyingly slow, and this led to just unenjoyable conversations with internet dropouts and whatnot. Some people realised they could use phone hotspots, or if they had enough pocket money or something, pay for a VPN - but these weren't ideal situations. We had fast schoolwide Wi-Fi, but just with a number of excessive restrictions.</p>
+                <p>I promise you this is all relevant - because this is where the start of i386chat really was. Not at the start of the <a href="https://github.com/i386chat/i386chat_server">i386chat_server</a> repository, not even with the first true iteration of what the i386chat server was: it began with a terrible hodgepodge chatbox called Hellbox.
+                    No clue why I named it that honestly. I guess I just thought it was cool.</p>
+                <p>Hellbox was something I created for me, my friends, and some others to chat amongst ourselves during class.</p>
+                <p>Hosted at my house, our school never really cared that much about it and never blocked my domain because it just wasn't worthwhile for them. It was pretty fucking ugly, but it ultimately worked.</p>
+                <p>It was created using the <a href="https://socket.io/docs/v4/tutorial/introduction">socket.io chat application tutorial</a> (although, this version of the tutorial is <em>way</em> newer, and way better written: super neat honestly, I'm happy to see it got some love over the years), with many extra additions over the few months worked on it including, but not limited to:</p>
+                <ul>
+                    <li>the addition of Markdown support</li>
+                    <li>automated image embedding</li>
+                    <li>user registration
+                        <ul>
+                            <li>it was very finicky, and oh so incredibly insecure - it saved to a terribly put together JSON database.
+                                <ul>
+                                    <li>I probably have the source for it laying around somewhere.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>individual rooms</li>
+                </ul>
+                <p>None of these features were particularly ground-breaking, or even very well written, but they sure as hell worked, and we used Hellbox almost constantly every day. It kept our teachers weirdly happy - probably because we were all much quieter in class.</p>
+                <p>Unfortunately, I really don't have any screenshots - or even the source code of Hellbox!
+                    It is really lost to time - which does honestly suck a lot. (note: if I ever find it [super unlikely as fuck: a good bit of data loss has hit me over the years unfortunately], I will update this post with a link to lightly cleaned up source code for it.)</p>
+                <p>I would really love to see this super old and highly insecure code - just to kind of see how I've improved over the years. It sits in the memory of those who used it, which is weirdly sweet I guess. It's something we all share, even though many of us don't really talk anymore.</p>
+                <p>Anyway, Hellbox became mostly useless with the introduction of services like Microsoft Teams, as many schools began to utilise it: we all just made individual group chats in there. Many teachers knew we used them, and just didn't care 99% of the time.</p>
+                <p>We were quiet in class, and yeah while we pissed away a lot of time, we still did our work.</p>
+                <h1 id="first"><a href="#first">#</a> the first real iteration of i386chat</h1>
+                i386chat began when I wanted to rewrite Hellbox.
+                <p>I wanted to properly learn how to use socket.io and include the functionality I wanted from the beginning, instead of terribly tacking code onto it as time went on: Hellbox suffered greatly from feature creep, and as a result had to be restarted semi-frequently. Not great.</p>
+                <p>The really early iterations of i386chat weren't called i386chat at all: the domain was <code>cb.i386.tech</code>, standing for <strong>c</strong>hat<strong>b</strong>ox - and the working directory for it? <code>wchatbox</code>, very intelligently meaning <strong>w</strong>eb <strong>chatbox</strong>. Smart.</p>
+                <p>It really wasn't anything really special, and it just was a non-persistent chatbox. (In fact, I liked the idea of it being non-persistent so much, that it became a long running detail about i386chat).</p>
+                <p>I showed this off to the people on the <a href="https://discord.gg/ipod">/r/iPod Discord</a>, and it kind of went from there.</p>
+                <p>A few people hopped on every so often, and we had a lot of fun just talking. (this really brings me back to my point of: I love chatting on the internet because keep in mind here - many of us are in completely different regions of the world, but we all connected in some way or another! I think that was the beauty of all of this really.)
+                    <span id="stallman"></span><img src="bredo.png" alt="bredo showing the first bot created for i386chat (prior to it's being called i386chat, as it was cb.i386.tech initially)" /><br />
+                    It was super fun to just chat on here, because well - it was a really lightweight websocket based chat app. We just kind of wanted to see what we could get it to run on, and it was just a novelty for us to chat with one another on something that wasn't Discord.</p>
+                <p>At some point, on the same day I put it up on the domain <code>cb.i386.tech</code>, only a few hours later, I changed it to <code>chat.i386.tech</code>, just for more clarity in what it was.</p>
+                <p>Can you guess how we got to the name i386chat?</p>
+                <p>Anyway, we had a lot of fun just chatting on this terrible first iteration.
+                    Finley made a pretty simple Electron wrapper, and mckinley made StallmanBot (pictured above), which was a simple bot (and actually the first bot!) that'd just look for the word <code>linux</code> in a message, and would just respond with the well known interjection copypasta.
+                    <img src="first_client.png" alt="Finley showing off an early desktop i386chat client." /><br />
+                    Over time, I implemented a lot of things that many were accustomed to in chat applications:</p>
+                <ul>
+                    <li>Separate rooms</li>
+                    <li>Nicknames</li>
+                    <li>&quot;Admin tags&quot;
+                        <ul>
+                            <li>This really was just intended for me to have a rainbow gradient name.
+                                <ul>
+                                    <li>I'm vain. What else is to be said?</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>User adjustable colours for nicknames
+                        <ul>
+                            <li>Lots of people abused this one quickly to set colours that were borderline un-fucking-readable. It was kind of funny honestly.</li>
+                        </ul>
+                    </li>
+                    <li>User bios
+                        <ul>
+                            <li>I beat Discord to this one.
+                                <ul>
+                                    <li>They added the About Me section in 2021, and I had this in i386chat in like late 2020. Sucks to suck.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Private messages
+                        <ul>
+                            <li>This kind of came as a byproduct to separate rooms, because my implementation of separate rooms just pushed me to create socket-to-socket private messaging.</li>
+                        </ul>
+                    </li>
+                    <li>Some degree of rate limiting
+                        <ul>
+                            <li>This really wasn't good, but it just kind of prevented mass spam at least.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>The final version of the first iteration is actually still completely available on GitHub <a href="https://github.com/i386chat/i386chat_server/tree/master">here</a>.</p>
+                <p>I published this almost exclusively because it was just neat to have laying around as not only a reference point, but also just as a little time capsule if you will.
+                    <img src="initial.png" alt="Initial commit for the i386chat_server repo" /><br />
+                    I don't have the very first version anymore because I worked on it in place, and didn't use git until more people than just myself started working on it.
+                    No, I don't have that mindset anymore. I love version control now, because it's saved me from losing projects during periods of data loss - especially during university.
+                    <strong>Use version control, people.</strong></p>
+                <p>Up until this point, i386chat was a completely solo venture. I'd just written this all by myself, and for the fun of it - and at some point, Finley decided to join in the project: and with this, we began working on expanding the server.</p>
+                <h1 id="expansion"><a href="#expansion">#</a> server expansion</h1>
+                Initially, the refactor was intended to be a clean-up of the server code.
+                I say initially: because it veeeerrry quickly became clear to us that there was no cleaning it up - throwing it all out and beginning again *using* the original code as a guide was the right move forward.
+                <p>Lots of major API changes were made, especially with the introduction of token based authentication.
+                    Up to this point, you could really easily impersonate someone by just setting your name to theirs. Blegh.</p>
+                <p>Finley took on the token authentication and gateway redesign aspect of i386chat: at some point, it effectively just became a shadow of Discord's gateway structure.
+                    Account creation was super simplified, and you didn't have a traditional username/password structure, but rather that you'd generate a key associated with your account, and you'd use that for authentication.</p>
+                <p>Lose that, and your account was <strong>gone</strong>. Not good, especially because losing a password is something you can recover from (most of the time): if you lose your token, it's gone <em>forever.</em></p>
+                <p>I never liked this method of authentication - and I still don't actually. I hate services that use authentication that requires you to remember a stupidly long key. Give me a username and password field god dammit. But it was simple enough and functional enough for me.. at least it was when it was working: this branch of i386chat was suuuuuper fucking unstable, and would break if you so much as thought about it too hard.</p>
+                <p>I didn't contribute a great deal to this branch of i386chat_server, so I don't actually have much knowledge on how it functioned, but fortunately as a part of its creation, Finley documented a great deal of things before implementation - and you're able to look at it <a href="https://github.com/i386chat/i386chat_docs">here</a>.<br />
+                    While I wrote much of the original iterations of the server and client, Finley really took the lead of programming for the <code>token-auth</code> branch - I still had a great deal of say in the direction we went in though. This documentation has been sitting dormant for about 5 years, private under our GitHub organization - prior writing this, I asked Finley if they'd be willing to set the visibility of these repos to public, and she was totally cool with it. You're able to take a look at it as much as you want! Neat, right?</p>
+                <p>We also aimed to create some form of a proper desktop client for i386chat, but we honestly never even thought about it that often outside of the initial &quot;yeah, that'd be a good idea&quot; exchanged. There was an Electron client that existed really early on, but it was honestly just a wrapper around the web client, and it honestly fell out of date super quickly. (if you scroll up, you're actually able to see it in a screenshot!)
+                    It was still cool to see my shitty little chat server running as a desktop application, right next to Discord.</p>
+                <p>It never got far because none of us really knew how to write native UI applications that looked as close as possible to the web client, so we always just gravitated towards Electron because <em>everything is Chrome in the future.....</em>
+                    <img src="zfHjS2R.png" alt="4 frames from the cartoon SpongeBob SquarePants where everything is turned into a metallic chrome finish." /><br />
+                    <a href="https://www.reddit.com/r/spongebob/comments/q0zxr/everything_is_chrome_in_the_future/">image source</a></p>
+                <h3 id="expansion_api"><a href="#expansion_api">#</a> api libraries + bots</h3>
+                Libraries for Python and JavaScript were created for interfacing with the i386chat API, entirely intended for automated users. The Python one never got really that far outside of initial creation, but the JavaScript one was quite usable.
+                A proper bot API was in progress, that was more limited than the user API, but would be way better documented publicly, but we put this on the back-burner when we decided we wanted to expand on the main user API first.
+                <p>These libraries were written by bredo and Finley (listing respective to the language used).</p>
+                <p>StallmanBot - the first bot for i386chat - written by mckinley didn't use any of these libraries, and instead just dealt with the API head-on. That was fine because initially, i386chat's API was super simplistic and honestly could be barely considered anything special. All it did was read messages, and respond accordingly: it'd search for linux in a message and respond with the very well-known copypasta written by Richard Stallman about the phrasing used when referring to Linux. Hilarious.</p>
+                <p>You can see a screenshot of it in action earlier up <a href="#stallman">here</a>.
+                    <img src="8osspXj.jpeg" alt="A picture of Richard Stallman looking to the side angrily, with the words ABSOLUTELY PROPRIETARY under him." /><br />
+                    <a href="https://imgur.com/new-background-of-windows-machine-8osspXj">image source</a></p>
+                <h1 id="everyone"><a href="#everyone">#</a> so, where is everyone now?</h1>
+                To put it really simply, we're all just really busy.
+                <p>Working on i386chat was really fun when we didn't really have responsibilities, and we were bored out of our minds during COVID, but we're all just doing our own things now.</p>
+                <p>I'm studying, and the others are either studying, working or have just straight disappeared from the internet (come back bagel boy). Many of us are still friends and we still talk - <em>just not on i386chat</em>.</p>
+                <h3 id="everyone_return"><a href="#everyone_return">#</a> do we ever intend to come back to this?</h3>
+                Obviously, I can only ever really answer for myself: I've considered it.
+                I think I've gotten better at programming since the last time I've worked on i386chat_server (you can make your own judgements: look at anything I've written since), and I'd love to make something that is far more functional - but it'd be barely related to old i386chat at all, and likely only in name.
+                It'd be fun to work on this to break up the monotony of life, but I'm also just busy with university or playing Final Fantasy XIV (something something free trial).
+
+                <p>I'm also pretty confident in saying that the others probably won't come back to work on anything though. They're busy, and doing way more important things in life now.</p>
+                <h3 id="everyone_run"><a href="#everyone_run">#</a> can I still run an i386chat server?</h3>
+                I'd say... probably yes? The code is all there, still intact and awful as we last left it.
+                <p>I can't make any promises that it's still functional in 2025, because it <em>is</em> <strong>5 years old</strong> by this point. Maybe I'll do a quick pass of the refactor branch and get it up to today's standards so you're at least able to run something as a sort of time capsule of how it once functioned: maybe I'll even run an i386chat server for shits and giggles, who knows?</p>
+                <p>Would I recommend running it in its current state? Not really honestly.<br />
+                    It's super out of date, badly written and probably full of insecurities we've missed somehow - and if you do intend to do anything with it, you should 100% update as many dependencies as you are capable of doing so.<br />
+                    I don't know how many dependencies have changed since 2021/2022, so there's probably a good many breaking changes that would require you to go back into the code and fix things up.</p>
+                <h1 id="end"><a href="#end">#</a> the end</h1>
+                I liked making i386chat - it was a fun little project. I miss working on it sometimes, because it brought me and my friends together, and that was really fun - especially during the uncertain times during COVID.
+                <p>There was nothing really special about it whatsoever. Nothing set it apart from any other chat application out there. In fact, what set it apart probably was more of a reason to not use it: it was insecure, non-persistent, unstable (what a great combination) and just simply made for fun by a bunch of teenagers on the internet.<br />
+                    You had plenty of better options, and much of the discussion <em>during</em> the creation of i386chat was done on Discord - a dramatically better option over i386chat.</p>
+                <p>Writing this brought back a lot of memories that probably wouldn't have come up again for quite some time, if ever again. Unfortunately, some of it is lost to the fact that the i386chat Discord was deleted once the project died off. My bad.</p>
+                <p>As long ago as it was now, and as minimal as it looks from the outside - I think the time we spent using and working on i386chat contributed to our friendships greatly. It feels stupid to say, but I think we all had a lot of fun planning the work we did, talking about it, doing it and even using i386chat for funsies.</p>
+                <p>Shoutout to Finley + bredo for their work and direct support with i386chat and my other friends from the /r/iPod Discord: Alice, Sawyer, Emma, Nick, Bailey, Lily and those I've missed. I'm glad to have met you all, and even though we've had disagreements over the years, we've still come back all together. I wouldn't have it any other way.</p>
+                <p>To finish up, here's the links to a bunch of i386chat GitHub stuff.<br />
+                    <a href="https://github.com/i386chat">GitHub organization</a> (contains more bits and pieces that I didn't cover here)<br />
+                    <a href="https://github.com/i386chat/i386chat_server">i386chat_server</a><br />
+                    <a href="https://github.com/i386chat/i386chat_docs">i386chat_docs</a></p>
+                <p>I hope that this was a somewhat interesting read and historical retelling of the process of i386chat's development.</p>
+                <p>Keep on the look out - I've got more posts about things on the way, focusing on:</p>
+                <ul>
+                    <li>Home automation using Home Assistant
+                        <ul>
+                            <li>I've fallen really hard into it all.
+                                <ul>
+                                    <li>The small little things that you can do make that make life just a little easier are pretty cool!</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>The work I've done on psbg since the initial post on it.
+                        <ul>
+                            <li>You might have noticed on the post list page that there's summaries now.
+                                <ul>
+                                    <li>That's new!</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>My gripes with
+                        <ul>
+                            <li>finding software that I like
+                                <ul>
+                                    <li>I'm picky, and I want to complain about software just not meeting my expectations, and my looking into other options.</li>
+                                </ul>
+                            </li>
+                            <li>VRChat's poor current goals and direction
+                                <ul>
+                                    <li>The Avatar Marketplace's structure upsets me greatly, and they keep blundering in some way or another.
+                                        <ul>
+                                            <li>I'd call VRChat a masterclass in shipping features close to dead on arrival.
+                                                <ul>
+                                                    <li>(is that too mean? probably, but they keep shipping features too early. let things cook longer guys.)</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -230,5 +269,7 @@ You had plenty of better options, and much of the discussion <em>during</em> the
 <script src="/ffxiv_egg.js"></script>
 <script src="/tagline.js"></script>
 <script src="/logo.js"></script>
-<script src="/nepeta.js"></script></body>
+<script src="/nepeta.js"></script>
+<script src="/misc.js"></script>
+</body>
 </html>
