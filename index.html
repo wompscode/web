@@ -14,7 +14,7 @@
     <link id="style" rel="stylesheet" href="style.css">
     <link id="homestuck" rel="stylesheet" href="style_hs.css" disabled>
 </head>
-<body onmousemove="cursorData(event)">
+<body>
 <div style="top: 0;" id="nepeta" class="nepeta">
     <img alt="nepeta" src="images/nepeta.gif">
 </div>
@@ -55,21 +55,44 @@
             you can reach me via <a class="my_name" href="mailto:phoebe@womp.gay">phoebe@womp.gay</a> and i'll get back to you.
             <br />
             <br />
+            <!-- small random text i want -->
+            <span><strong>1/07/25</strong>: lots of small little updates lately! many tiny easter eggs :)</span>
+            <br />
+            <br />
             <!-- 88x31 button section -->
-            <a title="womp.gay: the coolest website to ever grace the internet" class="webButton" href="https://womp.gay"><img alt="womp.gay button 88x31" src="/buttons/me.png"></a>
+            <div>
+            <a title="double click me to copy the code to hotlink my website to your website!" class="webButton" ondblclick="copyHotlink()"><img alt="womp.gay button 88x31" src="/buttons/me.png"></a>
             <a title="lily website" class="webButton" href="https://boxy.neocities.org/"><img alt="boxy button 88x31" src="/buttons/boxy.png"></a>
-            <a title="Download SBURB today!" class="webButton" href="https://homestuck.net"><img alt="homestuck sburb button 88x31" src="/buttons/sburb.gif"></a>
-            <a class="webButton" href="https://na.finalfantasyxiv.com/"><img alt="ffxiv button 88x31" src="/buttons/ffxiv.gif"></a>
-            <a class="webButton" href="http://toastytech.com/evil/index.html"><img alt="1984 IE button 88x31" src="/buttons/ie1984.gif"></a>
+            <br /> <br />
+            <a title="This game is truly out of this world!" class="webButton" href="https://homestuck.net"><img alt="homestuck sburb button 88x31" src="/buttons/sburb.gif"></a>
             <a class="webButton" href="https://firefox.com"><img alt="get mozilla button 88x31" src="/buttons/getmozilla.gif"></a>
+            <a class="webButton" href="https://www.slsknet.org/"><img alt="soulseek button 88x31" src="/buttons/soulseek.gif"></a>
+            <a class="webButton" href="http://www.gamespy.com/"><img alt="gamespy arcade button 88x31" src="/buttons/garcade.gif"></a>
+            <a class="webButton" href="https://na.finalfantasyxiv.com/"><img alt="ffxiv button 88x31" src="/buttons/ffxiv.gif"></a>
+            <a class="webButton" href="https://linustechtips.com/"><img alt="linus tech tips button 88x31" src="/buttons/ltt.gif"></a>
+            <a class="webButton"><img alt="transgender button 88x31" src="/buttons/tran.png"></a>
+            <a class="webButton" href="http://toastytech.com/evil/index.html"><img alt="1984 IE button 88x31" src="/buttons/ie1984.gif"></a>
+            <a class="webButton"><img alt="get flash button 88x31" src="/buttons/flash.gif"></a>
             <a class="webButton" href="https://eightyeightthirty.one"><img alt="eightyeightthirtyone button 88x31" src="/buttons/88x31.png"></a>
+            <a class="webButton" href="https://half-life.com"><img alt="half life button 88x31" src="/buttons/hl.gif"></a>
+            <a class="webButton"><img alt="made with mac button 88x31" src="/buttons/mwm.gif"></a>
+            </div>
+            <!-- noscript -->
+            <noscript>
+                my website is best experienced with javascript enabled! there's a good couple of easter eggs around..
+            </noscript>
         </div>
     </div>
-    <!--<div class="main-cont">
+    <!--
+        I like this section a lot, but it's definitely far from the most ideal thing to have on my portfolio/project website. Not like it's the most professional site ever - it's not, and it's full of easter eggs, but this is definitely a bit more imo
+        luv u kit
+
+        <div class="main-cont">
         <div class="bannerBox"> welcome 2 to the <a href="https://payhip.com/kitskennel">kit</a> section: <br> peeb likes it when i put my cold toesies on her legs in bed (<span style="color:red;">editors note: </span> fact checked and this is false) and also when i bite her and be like omononmnonmon slob on that knob. she also smells good snifffsnifnsfnsfnsifnsnurf </div>
     </div>-->
 </div>
-<!-- extra padding -->
+<div style="position:fixed;left:0;top:0;width:100%;z-index: 12;pointer-events:none;"><span id="parry" style="pointer-events:none;width: 100%;height:100%;opacity:0.2;display:none;"></span></div>
+<!-- extra padding for smaller screens, makes it easier to see :) -->
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 <script src="/ffxiv_egg.js"></script>
@@ -78,5 +101,6 @@
 <script src="/nepeta.js"></script>
 <script src="/misc.js"></script>
 <script src="/button_hover.js"></script>
+<script src="/anchor_hover.js"></script>
 </body>
 </html>

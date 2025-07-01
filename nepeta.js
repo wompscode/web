@@ -11,6 +11,7 @@ let nepeta_follow = false;
 let styleToggle = false;
 let styleToggleValue = 0;
 let styleToggler = false;
+let styleLock = false;
 let x = 0;
 let y = 0;
 
@@ -30,26 +31,32 @@ function toggleNepeta() {
     slide(nepeta, y - 50, x - 35);
     nepeta.style.display = nepeta_follow ? "block" : "none"
 }
-window.onload = function() {
-    nepetaToggler.addEventListener("mouseover", function() {
-        styleToggler = true;
-    })
-    nepetaToggler.addEventListener("mouseleave", function() {
-        styleToggler = false;
-    })
 
-    setInterval(() => {
-        if(styleToggler) {
-            if(styleToggleValue === 2) {
-                styleToggle = !styleToggle;
-                homestuck.disabled = !styleToggle;
-                element.src = styleToggle ? "/images/wompstuck.png" : "/logo.svg";
-                tag.innerText = styleToggle ? "I WARNED YOU ABOUT THE STAIRS BRO!!!!" : possible_taglines[Math.floor(Math.random() * possible_taglines.length)];
+window.onload = function() {
+    if(nepetaToggler != null) {
+        nepetaToggler.addEventListener("mouseover", function() {
+            styleToggler = true;
+        })
+        nepetaToggler.addEventListener("mouseleave", function() {
+            styleToggler = false;
+            styleLock = false;
+        })
+        setInterval(() => {
+            if(styleToggler && !styleLock) {
+                styleToggleValue++;
+                if(styleToggleValue === 75) {
+                    styleToggle = !styleToggle;
+                    homestuck.disabled = !styleToggle;
+                    element.src = styleToggle ? "/images/wompstuck.png" : "/logo.svg";
+                    tag.innerText = styleToggle ? "I WARNED YOU ABOUT THE STAIRS BRO!!!!" : possible_taglines[Math.floor(Math.random() * possible_taglines.length)];
+                    styleLock = true;
+                }
+            } else {
+                styleToggleValue = 0;
             }
-            styleToggleValue++;
-        } else {
-            styleToggleValue = 0;
-        }
-    }, 500);
+        }, 1)
+    }
+
+    document.body.addEventListener("mousemove", cursorData);
 }
 

@@ -11,6 +11,7 @@ function playOFF() {
     // sfx by Mortis Ghost and Alias Conrad Coldwood.
     // I love your game guys please dont kill meeee
     offAudio.src = sfxOFF[Math.floor(Math.random() * sfxOFF.length)];
+    offAudio.volume = 0.1;
     offAudio.play();
 }
 
@@ -18,15 +19,36 @@ function playBalatro() {
     // sfx by Localthunk
     // I love your game so much, it's my lecturers fault for getting me into it. You're like a virtual crack dealer.
     balatroAudio.src = sfxBalatro[Math.floor(Math.random() * sfxBalatro.length)];
+    balatroAudio.volume = 0.1;
     balatroAudio.play();
 }
 
 function parry() {
     // sfx by Hakita (/New Blood ULTRAKILL Team)
-    pry.play();
+    // i thought this was funny, and i am 1000% right
+    let parryGif = document.querySelector("#parry");
+    setTimeout(()=>{
+        pry.volume = 0.1;
+        let pryGif = new Image();
+        pry.play().then(() => {
+            pryGif.src = `images/parry.gif?${Date.now()}`; // it unfortunately will redownload it every time, but it'll restart properly each time. i don't know how else to do it. sorry slow internet people
+            pryGif.style = "pointer-events: none; width: 100%; height: 100%;"
+            parryGif.appendChild(pryGif);
+            document.querySelector("#parry").style.setProperty("display", "initial");
+        });
+        pry.onended = function () {
+            document.querySelector("#parry").style.setProperty("display", "none");
+            parryGif.innerHTML = "";
+        }
+    },100);
 }
 
 function whatupson() {
     // sfx by SLZ
+    whatup.volume = 0.1;
     whatup.play();
+}
+
+function copyHotlink() {
+    navigator.clipboard.writeText("<a title=\"womp.gay: the coolest website to ever grace the internet\" href=\"https://womp.gay\"><img alt=\"womp.gay\" src=\"https://womp.gay/buttons/me.png\"></a>\n");
 }

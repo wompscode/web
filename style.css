@@ -198,6 +198,7 @@ a:hover {
     height:86px;
     transition: .6s ease-in, .2s ease-out;
     display:inline-block;
+    user-select: none;
 }
 
 .logo:hover {
@@ -281,8 +282,16 @@ h1 {
 .webButton img {
     border-radius: 2px !important;
     image-rendering: pixelated !important;
+    transition: .15s ease-in-out !important;
 }
 
 .webButton:hover {
     transform: scale(1.25) !important;
 }
+
+.hotlinkHover {
+    display: inline-block;
+    user-select: none;
+}
+
+

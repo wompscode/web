@@ -196,21 +196,6 @@ a:hover {
     max-width:850px;
 }
 
-.logo {
-    width:auto;
-    height:86px;
-    transition: .6s ease-in, .2s ease-out;
-    display:inline-block;
-}
-
-.logo:hover {
-    transform:scale(1.05) rotate(1.6deg);
-}
-
-.bigger {
-    transform:scale(1.15) rotate(2.6deg) !important;
-}
-
 .container-padded {
     padding:22px;
 }
