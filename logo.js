@@ -25,10 +25,16 @@ element.addEventListener("click", function() {
                 img.remove();
                 clicked = 0;
                 lock = false;
-            }, 400);
+            }, 450);
         }
         setTimeout(() => {
             element.classList.remove("bigger");
         },125);
     }
 })
+
+let img = new Image();
+img.classList.add("explosion");
+_element.appendChild(img);
+img.style.setProperty("display", "none", "important");
+img.src = `https://womp.gay/images/explosion.gif?${Date.now()}`;
