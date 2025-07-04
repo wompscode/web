@@ -7,11 +7,8 @@ let style = document.querySelector("#style");
 let homestuck = document.querySelector("#homestuck");
 let nepetaToggler = document.querySelector("#nepetaToggler");
 let nepeta_follow = false;
+let homestuckToggle = false;
 
-let styleToggle = false;
-let styleToggleValue = 0;
-let styleToggler = false;
-let styleLock = false;
 let x = 0;
 let y = 0;
 
@@ -32,29 +29,30 @@ function toggleNepeta() {
     nepeta.style.display = nepeta_follow ? "block" : "none"
 }
 
+function toggleHS() {
+    if(window.homestuckEasterEgg !== undefined) {
+        clearTimeout(window.homestuckEasterEgg);
+    }
+    homestuckToggle = !homestuckToggle;
+    homestuck.disabled = !homestuckToggle;
+    element.src = homestuckToggle ? "/images/wompstuck.png" : "/logo.svg";
+    tag.innerText = homestuckToggle ? "I WARNED YOU ABOUT THE STAIRS BRO!!!!" : possible_taglines[Math.floor(Math.random() * possible_taglines.length)];
+}
+
+
 window.onload = function() {
     if(nepetaToggler != null) {
         nepetaToggler.addEventListener("mouseover", function() {
-            styleToggler = true;
+            if(window.homestuckEasterEgg !== undefined) {
+                clearTimeout(window.homestuckEasterEgg);
+            }
+            window.homestuckEasterEgg = setTimeout(toggleHS, 2000);
         })
         nepetaToggler.addEventListener("mouseleave", function() {
-            styleToggler = false;
-            styleLock = false;
-        })
-        setInterval(() => {
-            if(styleToggler && !styleLock) {
-                styleToggleValue++;
-                if(styleToggleValue === 75) {
-                    styleToggle = !styleToggle;
-                    homestuck.disabled = !styleToggle;
-                    element.src = styleToggle ? "/images/wompstuck.png" : "/logo.svg";
-                    tag.innerText = styleToggle ? "I WARNED YOU ABOUT THE STAIRS BRO!!!!" : possible_taglines[Math.floor(Math.random() * possible_taglines.length)];
-                    styleLock = true;
-                }
-            } else {
-                styleToggleValue = 0;
+            if(window.homestuckEasterEgg !== undefined) {
+                clearTimeout(window.homestuckEasterEgg);
             }
-        }, 1)
+        })
     }
 
     document.body.addEventListener("mousemove", cursorData);

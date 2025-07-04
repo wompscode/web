@@ -11,13 +11,17 @@ function buttonLeave(element) {
     element.target.style.transform = ""
 }
 
-for (var i = 0; i < __elements.length; i++) {
+for (let i = 0; i < __elements.length; i++) {
     __elements[i].onclick = function(event) {
         if(event.target.parentNode.nodeName !== "A") return;
         if(!event.target.parentElement.href) return;
-
+        if (event.ctrlKey || event.shiftKey || event.metaKey || (event.button && event.button === 1)){
+            return true; // if user middle click/opens in new tab it should not wait or force location
+        }
+        // otherwise, let animation finish and then go to location :)
         setTimeout(()=>{
-            // this shouldn't ever fail, but it totally could.
+            // this shouldn't ever fail, but it totally could. that'd really suck.
+            // either way, if something here fails your browser should just ignore it and go Okay well, use the anchor tag then
             window.location.href = event.target.parentElement.href;
         }, 385)
         return false;

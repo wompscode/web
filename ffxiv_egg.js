@@ -14,7 +14,7 @@ function exit(element) {
 
 }
 
-for (var i = 0; i < elements.length; i++) {
+for (let i = 0; i < elements.length; i++) {
     elements[i].innerHTML = "Final Fantasy XIV Online";
     elements[i].addEventListener("mouseenter", enter);
     elements[i].addEventListener("mouseleave", exit);
