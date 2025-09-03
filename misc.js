@@ -57,27 +57,29 @@ let switchoff = false;
 
 function off() {
     switchoff = !switchoff;
-    if(switchoff){
-        if(window.offTimeout !== undefined) {
-            clearTimeout(window.offTimeout);
-        }
-        document.body.className = "off disableTransitions";
-        document.querySelector(".shown").innerHTML = `The switch is now <span class="shown" onclick="off()">OFF</span>.`;
-        if(nepeta_follow === true) {
-            toggleNepeta();
-        }
-    } else {
-        if(window.offTimeout !== undefined) {
-            clearTimeout(window.offTimeout);
-        }
-        document.body.className = "disableTransitions";
-        document.querySelector(".shown").innerHTML = `The switch is <span class="shown" onclick="off()">ON</span>.`;
-        window.offTimeout = setTimeout(()=>{
-            document.body.className = "";
-        }, 750)
-    }
 
     let switchfx = new Audio("/offsfx/switch2.ogg");
     switchfx.volume = 0.1;
     switchfx.play();
+    switchfx.onplay = function () {
+        if(switchoff){
+            if(window.offTimeout !== undefined) {
+                clearTimeout(window.offTimeout);
+            }
+            document.body.className = "off disableTransitions";
+            document.querySelector(".shown").innerHTML = `The switch is now <span class="shown" onclick="off()">OFF</span>.`;
+            if(nepeta_follow === true) {
+                toggleNepeta();
+            }
+        } else {
+            if(window.offTimeout !== undefined) {
+                clearTimeout(window.offTimeout);
+            }
+            document.body.className = "disableTransitions";
+            document.querySelector(".shown").innerHTML = `The switch is <span class="shown" onclick="off()">ON</span>.`;
+            window.offTimeout = setTimeout(()=>{
+                document.body.className = "";
+            }, 750)
+        }
+    }
 }
