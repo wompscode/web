@@ -20,6 +20,7 @@ const possible_taglines = [
     "uhhhhhhhhh yeaj",
     "Reticulating splines",
     "IF YOU'RE READING THIS, YOU'VE BEEN IN A COMA FOR ALMOST 20 YEARS NOW.",
+    "you rang? HELLA GEM",
     "I've come to make an announcement: Shadow the Hedgehog's a bitch ass motherfucker",
     timesLoaded >= 2 ? `you've been here ${timesLoaded} time${timesLoaded === 1 ? "" : "s"}! isn't that cool?` : "this is your first time here! welcome!"];
 
