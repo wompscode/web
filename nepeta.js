@@ -24,12 +24,15 @@ function cursorData(event) {
 }
 
 function toggleNepeta() {
+    if(switchoff === true) return;
     nepeta_follow = !nepeta_follow;
     slide(nepeta, y - 50, x - 35);
     nepeta.style.display = nepeta_follow ? "block" : "none"
 }
 
 function toggleHS() {
+    if(switchoff === true) return;
+
     if(window.homestuckEasterEgg !== undefined) {
         clearTimeout(window.homestuckEasterEgg);
     }

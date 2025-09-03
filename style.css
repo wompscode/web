@@ -1,7 +1,6 @@
 /* pstyle: phoebe's style :) */
 
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap');
-
 :root {
     --background: rgb(6, 6, 6);
     --banner-background: rgb(10, 10, 10);
@@ -18,7 +17,7 @@ html, body {
     height: 100%;
     box-sizing: border-box;
     font-size:16px;
-    font-family: "Geist", "Geist Mono", sans-serif;
+    font-family: monospace;
 }
 
 code {
@@ -231,7 +230,7 @@ h1 {
 }
 
 .biggerText {
-    font-size: 24px !important;
+    font-size: 28px !important;
 }
 
 .my_name {
@@ -293,5 +292,53 @@ h1 {
     display: inline-block;
     user-select: none;
 }
+.disableTransitions {
+    transition: none !important;
+}
+.disableTransitions * {
+    transition: none !important;
+}
 
+.off {
+    color: transparent !important;
+    background-color: black;
+    transition: none !important;
+}
 
+.off a {
+    color: transparent !important;
+    background-color: black !important;
+    transition: none !important;
+}
+.off a:hover {
+    color: transparent !important;
+    background-color: black !important;
+    transition: none !important;
+}
+.off .my_name {
+    background: none !important;
+}
+.off span {
+    color: transparent !important;
+    transition: none !important;
+}
+
+.off img {
+    opacity: 0;
+    transition: none !important;
+}
+
+.off .shown {
+    color: var(--text-color) !important;
+}
+.off .shown:hover {
+    color: var(--text-color) !important;
+}
+.off div {
+    background-color: black !important;
+    transition: none !important;
+}
+
+.listContent:hover {
+    font-style: italic;
+}
