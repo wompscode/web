@@ -281,7 +281,7 @@ h1 {
 .webButton img {
     border-radius: 2px !important;
     image-rendering: pixelated !important;
-    transition: .15s ease-in-out !important;
+    transition: transform .15s ease-in-out !important;
 }
 
 .webButton:hover {
@@ -325,6 +325,10 @@ h1 {
 
 .off img {
     opacity: 0;
+    transition: none !important;
+}
+
+.disableTransitions .webButton {
     transition: none !important;
 }
 
